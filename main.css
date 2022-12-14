@@ -1,3 +1,21 @@
 body { 
     margin: 0; 
+    background-color: black;
+}
+#exploreButton {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    cursor: pointer;
+}
+#exploreButton:hover {
+    opacity: 70%;
+}
+#exploreButton:active {
+    opacity: 40%;
 }
