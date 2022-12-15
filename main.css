@@ -12,6 +12,7 @@ body {
     border-radius: 10px;
     border-width: 1px;
     cursor: pointer;
+    font-size: 22px;
 }
 #exploreButton:hover {
     opacity: 70%;
