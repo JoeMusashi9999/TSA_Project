@@ -20,3 +20,7 @@ body {
 #exploreButton:active {
     opacity: 40%;
 }
+
+#welcomeText {
+    color: white;
+}
