@@ -20,7 +20,19 @@ body {
 #exploreButton:active {
     opacity: 40%;
 }
+#welcomeHeader {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+}
 
 #welcomeText {
     color: white;
+    position: absolute;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -9%);
+    font-size: 18px;
 }

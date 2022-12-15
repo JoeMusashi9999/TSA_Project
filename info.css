@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(180, 180, 180);
+}
+
+.grid-container {
+    background-color: rgb(180, 180, 180);
+    border-style: solid;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+.grid-item {
+    border-style: solid;
+    background-color: rgb(87, 87, 87);
+}
+#earth {
+    grid-row-start: span 3;
+}
+#venus {
+    grid-row-start: span 2;
+}
+#mars {
+    grid-row-start: span 2;
+}
+#jupiter {
+
+}
+#saturn {
+    
+}
+#mercury {
+    
+}
+#uranus {
+    
+}
+#neptune {
+    
+}
