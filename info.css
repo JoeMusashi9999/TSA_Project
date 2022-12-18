@@ -14,6 +14,8 @@ body {
 .grid-item {
     border-style: solid;
     background-color: rgb(87, 87, 87);
+    display: flex;
+    justify-content: center;
 }
 #earth {
     grid-row-start: span 3;
