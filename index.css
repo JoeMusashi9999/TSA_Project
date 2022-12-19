@@ -41,7 +41,7 @@ body {
     color: white;
     position: absolute;
     left: 50%;
-    top: 8%;
+    top: 10%;
     transform: translate(-50%, -9%);
     font-size: 18px;
 }
