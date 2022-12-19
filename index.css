@@ -1,0 +1,51 @@
+/* Hey, CSS Wizards, can you take a look at
+https://webdevtrick.com/css-expand-button-on-hover/?adlt=strict&toWww=1&redig=B3ABD08F7D5149C693977D27BB730E8F
+I am having a hard time understanding. If possible, please integrate it with our current code with out breaking the page.
+Thanks again, 
+Derek Borden 
+*/
+
+body { 
+    margin: 0; 
+    background-color: black;
+}
+#exploreButton {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 22px;
+}
+#exploreButton:hover {
+    opacity: 70%;
+
+
+}
+#exploreButton:active {
+    opacity: 40%;
+}
+#welcomeHeader {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+}
+
+#welcomeText {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -9%);
+    font-size: 18px;
+}
+
+.sti_container {
+  position: relative;
+}
