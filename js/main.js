@@ -165,7 +165,7 @@ var render = function () {
         timestep=0.0;
     }
 
-    renderer.setPixelRatio(0.25);
+    renderer.setPixelRatio(0.5);
     renderer.render(scene, camera);
 };
 
