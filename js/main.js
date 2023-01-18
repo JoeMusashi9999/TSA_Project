@@ -9,6 +9,10 @@
 
 
 //Abhay code
+import * as THREE from 'three.js';
+
+import { OrbitControls } from 'OrbitControls.js';
+
 function compute_pos_x(start_ang, rad, timestep, ang_vel) {
     new_x = rad*Math.cos((start_ang+(ang_vel*timestep))*Math.PI/180);
     return new_x;
