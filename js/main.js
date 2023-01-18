@@ -9,6 +9,10 @@
 
 
 //Abhay code
+import * as THREE from 'three';
+
+import { OrbitControls } from 'OrbitControls';
+
 function compute_pos_x(start_ang, rad, timestep, ang_vel) {
     new_x = rad*Math.cos((start_ang+(ang_vel*timestep))*Math.PI/180);
     return new_x;
@@ -22,13 +26,13 @@ function compute_pos_z(start_ang, rad, timestep, ang_vel) {
 // Add overall scene
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 1000);
-const controls = new OrbitControls( camera, renderer.domElement );
 
 // Renderer
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 document.body.appendChild(renderer.domElement);
+const controls = new OrbitControls( camera, renderer.domElement );
 
 // Sun (Scene -> Sun)
 var sungeometry = new THREE.SphereGeometry(4, 50, 50);
