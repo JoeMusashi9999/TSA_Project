@@ -22,6 +22,7 @@ function compute_pos_z(start_ang, rad, timestep, ang_vel) {
 // Add overall scene
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 1000);
+const controls = new OrbitControls( camera, renderer.domElement );
 
 // Renderer
 var renderer = new THREE.WebGLRenderer();
@@ -116,6 +117,7 @@ camera.position.z=20;
 camera.position.y=30;
 camera.position.x=-55;
 camera.lookAt(0, 0, 0);
+controls.update();
 
 let timestep = 0.0;
 
