@@ -52,7 +52,9 @@ body {
     
 }
 #mercury {
-    
+    .MercuryImage {
+        max-width: 20%;
+    }
 }
 #uranus {
     
