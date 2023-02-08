@@ -42,6 +42,9 @@ body {
         max-width: 20%;
         display: block;
         width: 20%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 #mars {
