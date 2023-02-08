@@ -31,7 +31,7 @@ body {
     background-color: rgb(87, 87, 87);
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 80%;
 }
 #earth {
     grid-row-start: span 3;
