@@ -38,6 +38,9 @@ body {
 }
 #venus {
     grid-row-start: span 2;
+    .VenusImage {
+        max-width: 20%;
+    }
 }
 #mars {
     grid-row-start: span 2;
