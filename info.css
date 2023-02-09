@@ -31,7 +31,7 @@ body {
     background-color: rgb(87, 87, 87);
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 #earth {
     grid-row-start: span 3;
@@ -60,7 +60,10 @@ body {
 }
 
 .img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 0 8px 0 0;
+    position:relative; 
+    width: 50%;
+    height: 50%;
+    object-fit: fill;
+    
 }
