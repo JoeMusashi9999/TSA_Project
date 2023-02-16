@@ -1,69 +1,95 @@
+/* Apply general styles to the page */
+
 body {
-    background-color: rgb(180, 180, 180);
-}
-.header {
-    padding: 10px 16px;
-    background: #555;
-    color: #f1f1f1;
-  }
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   }
   
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
-  }
-.grid-container {
-    background-color: rgb(180, 180, 180);
-    border-style: solid;
-    display: grid;
-    height: 100%;
-    width:100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
-}
-.grid-item {
-    border-style: solid;
-    background-color: rgb(87, 87, 87);
+  /* Apply styles to the header section */
+  
+  .header {
+    background-color: #333;
+    color: #fff;
     display: flex;
-    justify-content: center;
-    width: 100%;
-}
-#earth {
-    grid-row-start: span 3;
-}
-#venus {
-    grid-row-start: span 2;
-    
-}
-#mars {
-    grid-row-start: span 2;
-}
-#jupiter {
-    /*Would like substyling like title, image, subtext for image. all stacked*/
-}
-#saturn {
-    
-}
-#mercury {
-    
-}
-#uranus {
-    
-}
-#neptune {
-    
-}
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  /* Apply styles to the grid container */
+  .grid-container {
+    display: grid;
+    grid-auto-columns: calc(50vw - 10px);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+/* Apply styles to the grid items */
 
-.img{
-    margin: 0 8px 0 0;
-    position:relative; 
-    width: 50%;
-    height: 50%;
-    object-fit: fill;
+  .grid-item {
+    background-color: #7a6767;
+    border: 1px solid #5e4e4e;
     
-}
+    padding: 20px;
+  }
+  
+  
+  
+  
+  .grid-item h1 {
+    margin-top: 0;
+  }
+  
+  .MercuryTitle h1,
+  .VenusSubtext h3 {
+    margin-bottom: 0;
+  }
+  
+  .grid-item .img {
+    display: block;
+    margin: 0 auto;
+    max-width: 25%;
+    height: auto;
+  }
+  
+  
+  /* Apply styles to the earth grid item */
+  
+  #earth {
+    grid-column: span 2;
+  }
+  
+  /* Apply styles to the website title */
+  
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  /* Apply styles to the planet subtext */
+  
+  .grid-item h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+  
+  /* Apply styles to the planet titles */
+  
+  #earth h2,
+  #mercury .MercuryTitle h1,
+  #venus .MercuryTitle h1,
+  #mars h1,
+  #jupiter h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  
+  
