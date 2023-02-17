@@ -1,5 +1,28 @@
+/*title segment*/
+.company-name-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .company-name {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .float-up {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
 /* Apply general styles to the page */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;

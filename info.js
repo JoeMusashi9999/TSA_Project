@@ -1,17 +1,11 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.addEventListener("scroll", function() {
+  const companyNameSection = document.querySelector(".company-name-section");
+  const distanceFromTop = companyNameSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
 
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+  if (distanceFromTop <= 0 && distanceFromTop >= -windowHeight) {
+    companyNameSection.classList.add("float-up");
   } else {
-    header.classList.remove("sticky");
+    companyNameSection.classList.remove("float-up");
   }
-}
+});
