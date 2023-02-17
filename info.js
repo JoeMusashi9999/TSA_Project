@@ -12,3 +12,35 @@ window.addEventListener("scroll", function() {
     completedUp=false;
   }
 });
+//menu:
+let prevScrollpos = window.pageYOffset;
+let menuHidden = false;
+let timeout = 0;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    // User is scrolling up
+    showMenu();
+  } else {
+    // User is scrolling down
+    hideMenu();
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+function hideMenu() {
+  if (!menuHidden) {
+    menuHidden = true;
+    clearTimeout(timeout);
+    document.querySelector('nav').classList.add('menu-hidden');
+    timeout = setTimeout(showMenu, 10000);
+  }
+}
+
+function showMenu() {
+  if (menuHidden) {
+    menuHidden = false;
+    document.querySelector('nav').classList.remove('menu-hidden');
+  }
+}

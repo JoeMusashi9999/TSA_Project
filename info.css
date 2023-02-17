@@ -1,3 +1,14 @@
+
+/*fonts!*/
+@font-face {
+    font-family: AquireBold;
+    src: url(fonts/AquireBold-8Ma60.otf);
+  } 
+@font-face {
+    font-family: Aquire;
+    src: url(fonts/Aquire-BW0ox.otf);
+}
+
 /*title segment*/
 .company-name-section {
     height: 100vh;
@@ -10,6 +21,7 @@
   
   .company-name {
     text-align: center;
+    font-family: AquireBold;
     font-size: 6rem;
     font-weight: bold;
     color: #ffffff;
@@ -19,7 +31,7 @@
   .float-up {
     opacity: 0;
     transform: translateY(-100%);
-    transition: opacity 0.75s ease-in, transform 0.75s ease-in;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
   }
 /*not working!!!*/
   .float-down {
@@ -29,6 +41,48 @@
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
+/*menu*/
+nav {
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-out;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Aquire;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .menu-hidden {
+    transform: translateY(-100%);
+  }
+  
+  .menu-visible {
+    transform: translateY(0);
+  }
+  
+
+
 /* Apply general styles to the page */
 body {
     font-family: Arial, sans-serif;
