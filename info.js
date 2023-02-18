@@ -7,11 +7,14 @@ window.addEventListener("scroll", function() {
   if (distanceFromTop <= 0 && distanceFromTop >= -windowHeight && !completedUp) {
     companyNameSection.classList.add("float-up");
     completedUp=true;
-  } else if (distanceFromTop == 0 && completedUp){//help!!!!
-    companyNameSection.classList.add("float-down");
-    completedUp=false;
   }
+  
+
 });
+
+
+
+
 //menu:
 let prevScrollpos = window.pageYOffset;
 let menuHidden = false;
