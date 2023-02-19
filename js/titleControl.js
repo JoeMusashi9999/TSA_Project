@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
   const distanceFromTop = companyNameSection.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
 
-  if (distanceFromTop <= 10 && distanceFromTop >= -windowHeight && !completedUp) {
+  if (distanceFromTop <= 50 && distanceFromTop >= -windowHeight && !completedUp) {
     companyNameSection.classList.add("float-up");
     completedUp=true;
   } else if (scrollPosition<=10 && completedUp){
