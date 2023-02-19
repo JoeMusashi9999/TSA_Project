@@ -55,6 +55,7 @@
     height: 20%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+    
   }
   
   #popup {
@@ -68,6 +69,7 @@
     max-width: 80%;
     max-height: 80%;
     overflow: auto;
+    
   }
   
   #popup h2 {
@@ -94,6 +96,7 @@ nav {
     background-color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-out;
+    z-index: 999;
   }
   
   nav ul {
@@ -119,7 +122,7 @@ nav {
     color: #000000;
     text-decoration: none;
     background-color: transparent;
-    padding: 0;
+    padding: 0px;
     border: none;
     font-family: Aquire;
     font-size: 30px;
@@ -159,7 +162,7 @@ body {
     margin-right: 10px;
   }
   
-  /* Apply styles to the grid container */
+  /* Apply styles to the grid container*/
   .grid-container {
     display: grid;
     grid-auto-columns: calc(50vw - 10px);

@@ -5,51 +5,77 @@ Thanks again,
 Derek Borden 
 */
 
+
+/*fonts!*/
+@font-face {
+  font-family: AquireBold;
+  src: url(fonts/AquireBold-8Ma60.otf);
+} 
+@font-face {
+  font-family: Aquire;
+  src: url(fonts/Aquire-BW0ox.otf);
+}
+
 body { 
     margin: 0; 
     background-color: black;
 }
 #exploreButton {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -90%);
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    border-width: 1px;
-    cursor: pointer;
-    font-size: 22px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: AquireBold;
+  color: white;
+  font-size: 22px;
 }
-#exploreButton:hover {
-    background-color: #f7c2f9;
-  }
-  #exploreButton:hover span {
-    padding-right: 25px;
-  }
-  #exploreButton:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+
+
+#exploreButton:hover span {
+  position: relative;
+  padding-right: 25px;
+}
+
+#exploreButton:hover span:after {
+  content: "→";
+  position: absolute;
+  opacity: 1;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 #exploreButton:active {
-    opacity: 40%;
+  opacity: 40%;
 }
+
 #welcomeHeader {
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, -5%);
+  color: white;
+  position: relative;
+  font-family: AquireBold;
+  font-size: 80px;
+  text-align: center;
+  
+  margin-top: 50px;
 }
 
 #welcomeText {
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translate(-50%, -9%);
-    font-size: 18px;
+  color: white;
+  position: relative;
+  font-family: AquireBold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
 }
+
 
 .sti_container {
   position: relative;

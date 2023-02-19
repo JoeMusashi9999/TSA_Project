@@ -5,6 +5,7 @@ const popupTitle = document.getElementById('popup-title');
 const popupText = document.getElementById('popup-text');
 
 popupButton.addEventListener('click', function() {
+  alert("f");
   popupTitle.innerText = 'Popup Title';
   popupText.innerText = 'This is the text of the popup.';
   popupOverlay.style.display = 'block';
