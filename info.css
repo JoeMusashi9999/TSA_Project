@@ -175,6 +175,7 @@ body {
   .grid-item {
     background-color: #7a6767;
     border: 1px solid #5e4e4e;
+    opacity: 80%;
     
     padding: 20px;
   }

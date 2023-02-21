@@ -28,7 +28,7 @@ body {
   background-color: transparent;
   padding: 20px;
   border-radius: 10px;
-  border-width: 1px;
+  border-width: 0px;
   cursor: pointer;
   font-family: AquireBold;
   color: white;
