@@ -18,7 +18,7 @@ function hideMenu() {
   if (!menuHidden) {
     menuHidden = true;
     clearTimeout(timeout);
-    document.querySelector('nav').classList.add('menu-hidden');
+    document.querySelector('nav.sticky-top').classList.add('menu-hidden');
     timeout = setTimeout(showMenu, 10000);
   }
 }
@@ -26,6 +26,6 @@ function hideMenu() {
 function showMenu() {
   if (menuHidden) {
     menuHidden = false;
-    document.querySelector('nav').classList.remove('menu-hidden');
+    document.querySelector('nav.sticky-top').classList.remove('menu-hidden');
   }
 }

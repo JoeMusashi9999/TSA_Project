@@ -22,7 +22,7 @@
   .company-name {
     text-align: center;
     font-family: AquireBold;
-    font-size: 6rem;
+    font-size: 450%;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
@@ -87,7 +87,7 @@
 
   
 /*menu*/
-nav {
+.sticky-top{
     height: 30px;
     position: fixed;
     top: 0;
@@ -97,6 +97,7 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-out;
     z-index: 999;
+    opacity: 90%;
   }
   
   nav ul {
@@ -107,18 +108,18 @@ nav {
     justify-content: space-between;
   }
   
-  nav ul li {
+ nav ul li {
     margin: 0 10px;
   }
   
-  nav ul li a {
+nav ul li a {
     color: #000000;
     text-decoration: none;
     font-family: Aquire;
     font-size: 30px;
     font-weight: 600;
   }
-  nav ul li button {
+nav ul li button {
     color: #000000;
     text-decoration: none;
     background-color: transparent;
@@ -144,8 +145,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
   }
+  /*progress bar*/
+  .progress-container {
+    width: 100%;
+    background-color: transparent;
+    height: 5px;
+    display: block;
+  }
+  .progress-bar {
+    background-color: red;
+    width: 0%;
+    display: block;
+    height: inherit;
   
+  }
   /* Apply styles to the header section */
   
   .header {
@@ -232,6 +248,9 @@ body {
     margin-bottom: 20px;
     font-size: 32px;
   }
+
+
+  
   
   
   
