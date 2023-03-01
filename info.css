@@ -142,6 +142,10 @@ nav ul li button {
 
 /* Apply general styles to the page */
 body {
+  background-image: url("images/background1.jpg");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
