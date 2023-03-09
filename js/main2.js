@@ -27,15 +27,16 @@ window.addEventListener('load', function() {
     (function init() {
         // renderer
         renderer = new THREE.WebGLRenderer({
-            antialias: true
+            antialias: true//,
+            //preserveDrawingBuffer: true,  // so canvas.toBlob() make sense
+            //alpha:true,   // so png background is transparent
         });
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(w, h);
         container = document.getElementById('container');
+        renderer.setSize(w*0.8, h*0.8);
         container.appendChild(renderer.domElement);
 
         stats = new Stats();
-        stats.dom.style.position = 'absolute';
 
         // world
         scene = new THREE.Scene();
