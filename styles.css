@@ -1,6 +1,6 @@
 /* This is an absolute mess, not even sure what's being used...*/
 
-/*You take that back it was a solo effort to get this page to where it is now!
+/*You take that back it was a solo effort to get this page to where it is now! I didn't see you contribute until just a little while ago.
 -Derek */
 
 /*fonts!*/
@@ -41,7 +41,7 @@
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-/*start of popups*/
+/*start of popups - unused*/
 #popup-overlay {
     position: fixed;
     top: 0;
