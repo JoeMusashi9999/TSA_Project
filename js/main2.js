@@ -154,7 +154,7 @@ window.addEventListener('load', function() {
         scene.add( path );
 
         camera.position.z=20;
-        camera.position.y=30;
+        camera.position.y=0;
         camera.position.x=-55;
         camera.lookAt(0, 0, 0);
 
@@ -181,11 +181,11 @@ window.addEventListener('load', function() {
         if (!isDragging) {
             mouse.x = (event.clientX / w) * 2 - 1;
             mouse.y = -(event.clientY / h) * 2 + 1;
-
+            //console.log(mouse.x, mouse.y);
             raycaster.setFromCamera(mouse, camera);
             var intersects = raycaster.intersectObjects(scene.children);
-            console.log(intersects);
             if (intersects.length > 0) {
+                console.log(mouse.x, mouse.y);
                 if (INTERSECTED != intersects[0].object) {
                     if (INTERSECTED) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
                     INTERSECTED = intersects[0].object;
