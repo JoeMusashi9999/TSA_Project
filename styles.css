@@ -4,15 +4,23 @@
 -Derek */
 
 /*fonts!*/
+/*
 @font-face {
-    font-family: AquireBold;
+    font-family: Manrope;
     src: url(fonts/AquireBold-8Ma60.otf);
 } 
 @font-face {
-    font-family: Aquire;
+    font-family: Manrope;
     src: url(fonts/Aquire-BW0ox.otf);
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+*/
+@font-face {
+    font-family: Manrope;
+    src: url(fonts/Akira.otf);
+}
 /*title segment*/
 .company-name-section {
     height: 100vh;
@@ -24,7 +32,7 @@
 } 
 .company-name {
     text-align: center;
-    font-family: AquireBold;
+    font-family: Manrope;
     font-size: 450%;
     font-weight: bold;
     color: #ffffff;
@@ -75,53 +83,47 @@
 
 /*explore stuff*/
 #exploreButton {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    border-width: 0px;
-    cursor: pointer;
-    font-family: AquireBold;
-    color: white;
-    font-size: 22px;
+    font-family: Manrope;
+    text-align: center;
+    color: red;
+    background-color: white;
+    text-decoration: none;
+    padding: 25px;
+    transition: color 400ms;
+    transition: background-color 400ms;
+    transition: box-shadow 400ms;
+    margin-bottom: 100px;
 }
 
-#exploreButton:hover span {
-    position: relative;
-    padding-right: 25px;
-}
-  
-#exploreButton:hover span:after {
-    content: "→";
-    position: absolute;
-    opacity: 1;
-    right: -15px;
-    top: 50%;
-    transform: translateY(-50%);
+#exploreButton:hover {
     color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: red;
+    box-shadow: 5px 10px
 }
-  
-#exploreButton:active {
-    opacity: 40%;
-}
-  
+
 #welcomeHeader {
     color: white;
     position: relative;
-    font-family: AquireBold;
-    font-size: 80px;
+    font-family: Manrope;
+    font-size: 60px;
     text-align: center;   
     margin-top: 50px;
+    margin-bottom: 0px;
 }
-  
+
+#welcomeHeader2 {
+    color: white;
+    position: relative;
+    font-family: Manrope;
+    font-size: 100px;
+    text-align: center;   
+    margin-top: 25px;
+}
+
 #welcomeText {
     color: white;
     position: relative;
-    font-family: AquireBold;
+    font-family: Manrope;
     font-size: 18px;
     text-align: center;
     margin-top: 5%;
@@ -160,7 +162,7 @@ nav ul li {
 nav ul li a {
     color: #FFFFFF;
     text-decoration: none;
-    font-family: Aquire;
+    font-family: Manrope;
     font-size: 30px;
     font-weight: 600;
 }
@@ -171,7 +173,7 @@ nav ul li button {
     background-color: transparent;
     padding: 0px;
     border: none;
-    font-family: Aquire;
+    font-family: Manrope;
     font-size: 30px;
     font-weight: 600;
 }
@@ -214,16 +216,16 @@ nav ul li button {
 }
 
 /* Apply general styles to the page */
+html {
+    height: 100%;
+}
 body {
   background-image: url("images/background1.jpg");
   background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    min-height: 100%;
 }
 
 .pictureContainer {
@@ -337,4 +339,24 @@ h2 {
 #jupiter h1 {
     margin-bottom: 20px;
     font-size: 32px;
+}
+
+@keyframes inandout {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+#cursor {
+    opacity: 1;
+    animation-name: inandout;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+#container {
+    margin: 50px;
+    margin-bottom: 10px;
+    position: relative;
 }
