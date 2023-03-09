@@ -1,9 +1,11 @@
+/* This is an absolute mess, not even sure what's being used...*/
+
 
 /*fonts!*/
 @font-face {
     font-family: AquireBold;
     src: url(fonts/AquireBold-8Ma60.otf);
-  } 
+} 
 @font-face {
     font-family: Aquire;
     src: url(fonts/Aquire-BW0ox.otf);
@@ -17,36 +19,27 @@
     align-items: center;
     position: relative;
     z-index: 1;
-  }
-  
-  .company-name {
+} 
+.company-name {
     text-align: center;
     font-family: AquireBold;
     font-size: 450%;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
-  }
-  
-  .float-up {
+}
+.float-up {
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-  }
-/*working!!!*/
- .float-down {
+}
+.float-down {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-  }
-
-
-
+}
 
 /*start of popups*/
-
-
-
 #popup-overlay {
     position: fixed;
     top: 0;
@@ -54,11 +47,10 @@
     width: 20%;
     height: 20%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    
-  }
+    display: none;  
+}
   
-  #popup {
+#popup {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,23 +61,74 @@
     max-width: 80%;
     max-height: 80%;
     overflow: auto;
-    
-  }
+}
   
-  #popup h2 {
+#popup h2 {
     margin-top: 0;
-  }
+}
   
-  #popup-close-button {
+#popup-close-button {
     margin-top: 20px;
-  }
+}
 
+/*explore stuff*/
+#exploreButton {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 0px;
+    cursor: pointer;
+    font-family: AquireBold;
+    color: white;
+    font-size: 22px;
+}
 
-
-
-
-
+#exploreButton:hover span {
+    position: relative;
+    padding-right: 25px;
+}
   
+#exploreButton:hover span:after {
+    content: "→";
+    position: absolute;
+    opacity: 1;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+#exploreButton:active {
+    opacity: 40%;
+}
+  
+#welcomeHeader {
+    color: white;
+    position: relative;
+    font-family: AquireBold;
+    font-size: 80px;
+    text-align: center;   
+    margin-top: 50px;
+}
+  
+#welcomeText {
+    color: white;
+    position: relative;
+    font-family: AquireBold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.sti_container {
+    position: relative;
+}
+
 /*menu*/
 .sticky-top{
     height: 30px;
@@ -98,27 +141,28 @@
     transition: transform 0.3s ease-out;
     z-index: 999;
     opacity: 90%;
-  }
+}
   
-  nav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
-  }
+}
   
- nav ul li {
+nav ul li {
     margin: 0 10px;
-  }
+}
   
 nav ul li a {
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
     font-family: Aquire;
     font-size: 30px;
     font-weight: 600;
-  }
+}
+
 nav ul li button {
     color: #000000;
     text-decoration: none;
@@ -128,17 +172,44 @@ nav ul li button {
     font-family: Aquire;
     font-size: 30px;
     font-weight: 600;
-  }
+}
   
-  .menu-hidden {
+.menu-hidden {
     transform: translateY(-100%);
-  }
+}
   
-  .menu-visible {
+.menu-visible {
     transform: translateY(0);
-  }
+}
   
+/*Something...*/
+#main-content {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
 
+/* styles for the sidebar */
+#sidebar {
+    float: right;
+    width: 50%;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* styles for the planet sections */
+.planet-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    
+}
+      
+.footer{
+  position: fixed;
+  bottom:0;
+  width:100%
+}
 
 /* Apply general styles to the page */
 body {
@@ -151,110 +222,117 @@ body {
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
-  }
-  /*progress bar*/
-  .progress-container {
+}
+
+.pictureContainer {
+    background-color: #ffffff;
+    opacity: 90%;
+    display: absolute;
+    color: black;
+    max-width: 25%;
+    align-items: center;
+}
+
+.pictureContainer img {
+    height: auto;
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+#mainBody{
+    background-color: #333;
+    opacity: 90%;
+    align-items: center;
+    display: flex;
+    color:#ffffff;
+}
+
+/*progress bar*/
+.progress-container {
     width: 100%;
     background-color: transparent;
     height: 5px;
     display: block;
-  }
-  .progress-bar {
+}
+.progress-bar {
     background-color: red;
     width: 0%;
     display: block;
     height: inherit;
+}
   
-  }
-  /* Apply styles to the header section */
-  
-  .header {
+/* Apply styles to the header section */
+.header {
     background-color: #333;
     opacity: 90%;
     color: #fff;
     display: flex;
     align-items: center;
     padding: 15px;
-  }
+}
   
-  .header img {
+.header img {
     height: 50px;
     margin-right: 10px;
-  }
+}
   
-  /* Apply styles to the grid container*/
-  .grid-container {
+/* Apply styles to the grid container*/
+.grid-container {
     display: grid;
     grid-auto-columns: calc(50vw - 10px);
     grid-gap: 10px;
     padding: 10px;
-  }
+}
   
 /* Apply styles to the grid items */
-
-  .grid-item {
+.grid-item {
     background-color: #7a6767;
     border: 1px solid #5e4e4e;
-    opacity: 80%;
-    
+    opacity: 80%; 
     padding: 20px;
-  }
+}
   
-  
-  
-  
-  .grid-item h1 {
+.grid-item h1 {
     margin-top: 0;
-  }
+}
   
-  .MercuryTitle h1,
-  .VenusSubtext h3 {
+.MercuryTitle h1,
+.VenusSubtext h3 {
     margin-bottom: 0;
-  }
+}
   
-  .grid-item .img {
+.grid-item .img {
     display: block;
     margin: 0 auto;
     max-width: 25%;
     height: auto;
-  }
+}
   
-  
-  /* Apply styles to the earth grid item */
-  
-  #earth {
+/* Apply styles to the earth grid item */
+#earth {
     grid-column: span 2;
-  }
+}
   
-  /* Apply styles to the website title */
-  
-  h2 {
+/* Apply styles to the website title */
+h2 {
     margin: 0;
     font-size: 24px;
     font-weight: normal;
-  }
+}
   
-  /* Apply styles to the planet subtext */
-  
-  .grid-item h3 {
+/* Apply styles to the planet subtext */
+.grid-item h3 {
     font-size: 16px;
     line-height: 1.4;
     margin-top: 20px;
-  }
+}
   
-  /* Apply styles to the planet titles */
-  
-  #earth h2,
-  #mercury .MercuryTitle h1,
-  #venus .MercuryTitle h1,
-  #mars h1,
-  #jupiter h1 {
+/* Apply styles to the planet titles */
+#earth h2,
+#mercury .MercuryTitle h1,
+#venus .MercuryTitle h1,
+#mars h1,
+#jupiter h1 {
     margin-bottom: 20px;
     font-size: 32px;
-  }
-
-
-  
-  
-  
-  
+}
