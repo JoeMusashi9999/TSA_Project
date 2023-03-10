@@ -1,8 +1,3 @@
-/* This is an absolute mess, not even sure what's being used...*/
-
-/*You take that back it was a solo effort to get this page to where it is now! I didn't see you contribute until just a little while ago.
--Derek */
-
 /*fonts!*/
 /*
 @font-face {
@@ -17,6 +12,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
 */
+
 @font-face {
     font-family: Manrope;
     src: url(fonts/Akira.otf);
