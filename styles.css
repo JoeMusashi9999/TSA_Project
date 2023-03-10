@@ -93,6 +93,9 @@
     transition: background-color 400ms;
     transition: box-shadow 400ms;
     margin-bottom: 100px;
+    display: block;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 #exploreButton:hover {
@@ -107,7 +110,7 @@
     font-family: Manrope;
     font-size: 60px;
     text-align: center;   
-    margin-top: 50px;
+    margin-top: 75px;
     margin-bottom: 0px;
 }
 
