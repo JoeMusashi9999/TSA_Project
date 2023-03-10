@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <div class="logo">My Website</div>
-    <ul class="nav-links">
-      <li class="selected"><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        My Website
+      </div>
+      <ul class="nav-links">
+        <li class="nav-link selected"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="#">About</a></li>
+        <li class="nav-link"><a href="#">Services</a></li>
+        <li class="nav-link"><a href="#">Contact</a></li>
+        <li class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <h1>Welcome to My Website!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut urna id odio laoreet interdum eget ut tellus. Suspendisse dapibus ante et neque aliquam, ut molestie risus lacinia.</p>
     </div>
-  </nav>
-  
-  <script src="app.js"></script>
-</body>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
 </html>
