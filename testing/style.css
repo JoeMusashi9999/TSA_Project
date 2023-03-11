@@ -88,13 +88,13 @@ body {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 10vh;
+    height: 100vh;
+    top: 70px;
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 150px;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -114,7 +114,7 @@ body {
 
   .nav-links li {
     list-style: none;
-    margin: 50px 0;
+    margin: 10px 0;
   }
 
   .nav-links a {
