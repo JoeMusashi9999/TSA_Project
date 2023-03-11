@@ -16,7 +16,7 @@
         <li><a href="#">Contact</a></li>
         <li class="signup"><a href="#">Sign Up</a></li>
       </ul>
-      <div class="hamburger">
+      <div class="hamburger" id="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -28,21 +28,23 @@
       const links = document.querySelectorAll(".nav-links li");
 
       hamburger.addEventListener("click", () => {
-        // Toggle Nav
-        navLinks.classList.toggle("active");
-  
-        // Animate Links
-        links.forEach((link, index) => {
-          if (link.style.animation) {
-            link.style.animation = "";
-          } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-          }
-        });
-  
-        // Hamburger Animation
-        hamburger.classList.toggle("change");
+      // Toggle Nav
+      navLinks.classList.toggle("active");
+
+      // Animate Links
+      links.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = "";
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`;
+        }
       });
+
+      // Hamburger Animation
+      hamburger.classList.toggle("change");
+    });
     </script>
   </body>
 </html>
