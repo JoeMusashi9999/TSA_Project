@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Website</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="script.js"></script>
-</head>
-<body>
-	<nav>
-		<div class="logo">
-			My Website
-		</div>
-		<ul class="nav-links">
-			<li class="nav-link"><a href="#">Home</a></li>
-			<li class="nav-link"><a href="#">About</a></li>
-			<li class="nav-link"><a href="#">Contact</a></li>
-			<li class="burger">
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="line"></div>
-			</li>
-		</ul>
-	</nav>
+  <head>
+    <title>Terra Ultra</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <img src="logo.png" alt="logo" width="40">
+        <h4>TERRA ULTRA</h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="signup"><a href="#">Sign Up</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-links li");
 
-	<div class="content">
-		<h1>Welcome to My Website</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique euismod libero, vitae fringilla magna ultricies at. Aenean convallis tortor risus, a auctor sapien consequat sed.</p>
-		<p>Donec euismod congue dui, id convallis lectus ultrices eu. Suspendisse potenti. Morbi gravida nunc ut metus accumsan imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-	</div>
-</body>
+      hamburger.addEventListener("click", () => {
+        // Toggle Nav
+        navLinks.classList.toggle("active");
+  
+        // Animate Links
+        links.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+          }
+        });
+  
+        // Hamburger Animation
+        hamburger.classList.toggle("change");
+      });
+    </script>
+  </body>
 </html>
