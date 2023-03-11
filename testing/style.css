@@ -1,23 +1,28 @@
-/* Base Styles */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: sans-serif;
 }
 
-/* Navigation Bar Styles */
 .nav {
-  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  background-color: black;
+  color: white;
+  height: 70px;
+  padding: 0 5%;
+  position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  color: white;
+  cursor: pointer;
 }
 
 .logo img {
@@ -26,21 +31,20 @@ body {
 
 .nav-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  justify-content: space-around;
+  width: 500px;
 }
 
 .nav-links li {
   list-style: none;
-  margin: 0 10px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
 }
 
@@ -48,95 +52,105 @@ body {
   content: "";
   display: block;
   height: 3px;
-  width: 100%;
+  width: 0%;
   background-color: blue;
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   left: 0;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.5s ease;
 }
 
 .nav-links a:hover::before {
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .signup a {
   background-color: white;
   color: black;
-  padding: 8px 20px;
+  padding: 8px 16px;
   border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .hamburger {
   display: none;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    position: relative; /* Add this */
-  }
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
 
+@media screen and (max-width: 1024px) {
   .nav-links {
-    display: none;
-    width: 100%;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 10vh;
+    background-color: black;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 100%; /* Change this from 60px */
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    background-color: black;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
   }
 
   .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
+    opacity: 0;
   }
 
   .hamburger {
     display: block;
     position: absolute;
-    top: 50%; /* Change this */
-    right: 20px;
-    transform: translateY(-50%); /* Add this */
-    cursor: pointer;
+    top: 50%;
+    right: 5%;
+    z-index: 2;
+    transform: translateY(-50%);
   }
 
-  .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
+  .nav-links li {
+    list-style: none;
+    margin: 50px 0;
   }
 
-  .change .line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .change .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .change .line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
   }
 
   .nav-links.active {
-    display: flex;
+    transform: translateX(0%);
+  }
+
+  .nav-links.active li {
     opacity: 1;
+    transition: opacity 0.5s ease 0.3s;
+  }
+
+  .line.change.line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line.change.line-2 {
+    opacity: 0;
+  }
+
+  .line.change.line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .signup a {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
   }
 }
