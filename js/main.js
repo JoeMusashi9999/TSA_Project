@@ -31,44 +31,44 @@ scene.add(sun);
 
 // Mercury (Scene -> Mercury)
 var mercurygeometry = new THREE.SphereGeometry(0.5, 50, 50);
-var mercurymaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/mercury.jpg")});
+var mercurymaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/mercury.jpg")});
 var mercury = new THREE.Mesh(mercurygeometry, mercurymaterial);
 scene.add(mercury);
 
 // Venus (Scene -> Venus)
 var venusgeometry = new THREE.SphereGeometry(1, 50, 50);
-var venusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/venus.jpg")});
+var venusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/venus.jpg")});
 var venus = new THREE.Mesh(venusgeometry, venusmaterial);
 scene.add(venus);
 
 // Earth (Scene -> Earth)
 var earthgeometry = new THREE.SphereGeometry(1, 50, 50);
-var earthmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/earth.jpg")});
+var earthmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/earth.jpg")});
 var earth = new THREE.Mesh(earthgeometry, earthmaterial);
 scene.add(earth);
 
 // Moon (Scene -> Earth -> Moon)
 var moongeometry = new THREE.SphereGeometry(0.25, 50, 50);
-var moonmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/moon.jpg")});
+var moonmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/moon.jpg")});
 var moon = new THREE.Mesh(moongeometry, moonmaterial);
 moon.position.x = 2;
 earth.add(moon);
 
 // Mars (Scene -> Mars)
 var marsgeometry = new THREE.SphereGeometry(0.7, 50, 50);
-var marsmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/mars.jpg")});
+var marsmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/mars.jpg")});
 var mars = new THREE.Mesh(marsgeometry, marsmaterial);
 scene.add(mars);
 
 // Jupiter (Scene -> Jupiter)
 var jupitergeometry = new THREE.SphereGeometry(2, 50, 50);
-var jupitermaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/upiter.jpg")});
+var jupitermaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/upiter.jpg")});
 var jupiter = new THREE.Mesh(jupitergeometry, jupitermaterial);
 scene.add(jupiter);
 
 // Saturn (Scene -> Saturn)
 var saturngeometry = new THREE.SphereGeometry(1.4, 50, 50);
-var saturnmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/saturn.jpg")});
+var saturnmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/saturn.jpg")});
 var saturn = new THREE.Mesh(saturngeometry, saturnmaterial);
 scene.add(saturn);
 
@@ -81,13 +81,13 @@ saturn.add( ring );
 
 // Uranus (Scene -> Uranus)
 var uranusgeometry = new THREE.SphereGeometry(0.5, 50, 50);
-var uranusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/uranus.jpg")});
+var uranusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/uranus.jpg")});
 var uranus = new THREE.Mesh(uranusgeometry, uranusmaterial);
 scene.add(uranus);
 
 // Neptune (Scene -> Neptune)
 var neptunegeometry = new THREE.SphereGeometry(0.5, 50, 50);
-var neptunematerial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("/static/rotating_planets_imgs/neptune.jpg")});
+var neptunematerial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/neptune.jpg")});
 var neptune = new THREE.Mesh(neptunegeometry, neptunematerial);
 scene.add(neptune);
 
