@@ -409,3 +409,27 @@ footer {
   .goog-te-gadget-simple span a{
     color: white !important;
   }
+
+
+/* News Section styling*/
+b {
+  color: white;
+  font-family: Manrope;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  background-color: transparent;
+  transition: none;
+  padding-bottom: 10px;
+}
+
+b:hover {
+  color: red;
+}
+
+p1 {
+  color:white; 
+}
+
+
