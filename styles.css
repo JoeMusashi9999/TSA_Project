@@ -33,6 +33,7 @@ body {
     radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 2px);
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    margin: 0px;
 }
 
 a {
@@ -365,4 +366,39 @@ footer {
   
   .goog-te-gadget {
     font-size: 14px;
-  } 
+  }
+
+  .goog-te-combo {
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .goog-te-combo-arrow {
+    background-image: none;
+    border: none;
+  }
+  
+  .goog-te-menu-value span {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .goog-te-menu2-item {
+    padding: 10px;
+  }
+  
+  .goog-te-menu2 {
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .goog-te-menu2-item:hover {
+    background-color: #eee;
+  }
+  
+  .goog-te-menu2-item span:hover {
+    color: #333;
+  }
