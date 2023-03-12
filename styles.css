@@ -1,360 +1,363 @@
-/*fonts!*/
-/*
-@font-face {
-    font-family: Manrope;
-    src: url(fonts/AquireBold-8Ma60.otf);
-} 
-@font-face {
-    font-family: Manrope;
-    src: url(fonts/Aquire-BW0ox.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
-*/
 @font-face {
     font-family: Manrope;
     src: url(fonts/Akira.otf);
 }
-/*title segment*/
-.company-name-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-} 
-.company-name {
-    text-align: center;
-    font-family: Manrope;
-    font-size: 450%;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px #000000;
-}
-.float-up {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-}
-.float-down {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-}
 
-/*start of popups - unused*/
-#popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;  
-}
-  
-#popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
-}
-  
-#popup h2 {
-    margin-top: 0;
-}
-  
-#popup-close-button {
-    margin-top: 20px;
-}
-
-/*explore stuff*/
-#exploreButton {
-    font-family: Manrope;
-    text-align: center;
-    color: red;
-    background-color: white;
-    text-decoration: none;
-    padding: 25px;
-    transition: color 400ms;
-    transition: background-color 400ms;
-    transition: box-shadow 400ms;
-    margin-bottom: 100px;
-    display: block;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-#exploreButton:hover {
-    color: white;
-    background-color: red;
-    box-shadow: 5px 10px
-}
-
-#welcomeHeader {
-    color: white;
-    position: relative;
-    font-family: Manrope;
-    font-size: 60px;
-    text-align: center;   
-    margin-top: 75px;
-    margin-bottom: 0px;
-}
-
-#welcomeHeader2 {
-    color: white;
-    position: relative;
-    font-family: Manrope;
-    font-size: 100px;
-    text-align: center;   
-    margin-top: 25px;
-}
-
-#welcomeText {
-    color: white;
-    position: relative;
-    font-family: Manrope;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.sti_container {
-    position: relative;
-}
-
-/*menu*/
-.sticky-top{
-    height: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-out;
-    z-index: 999;
-    opacity: 90%;
-}
-  
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-  
-nav ul li {
-    margin: 0 10px;
-}
-  
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: Manrope;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-nav ul li button {
-    color: #000000;
-    text-decoration: none;
-    background-color: transparent;
-    padding: 0px;
-    border: none;
-    font-family: Manrope;
-    font-size: 30px;
-    font-weight: 600;
-}
-  
-.menu-hidden {
-    transform: translateY(-100%);
-}
-  
-.menu-visible {
-    transform: translateY(0);
-}
-  
-/*Something...*/
-#main-content {
-    float: left;
-    width: 50%;
-    padding: 20px;
-}
-
-/* styles for the sidebar */
-#sidebar {
-    float: right;
-    width: 50%;
-    padding: 20px;
-    background-color: #f2f2f2;
-}
-
-/* styles for the planet sections */
-.planet-section {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    
-}
-      
-.footer{
-  position: fixed;
-  bottom:0;
-  width:100%
-}
-
-/* Apply general styles to the page */
-html {
-    height: 100%;
-}
-body {
-  background-image: url("images/background1.jpg");
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    min-height: 100%;
-}
-
-.pictureContainer {
-    background-color: #ffffff;
-    opacity: 90%;
-    display: absolute;
-    color: black;
-    max-width: 25%;
-    align-items: center;
-}
-
-.pictureContainer img {
-    height: auto;
-    max-width: 100%;
-    margin-right: 10px;
-}
-
-#mainBody{
-    background-color: #333;
-    opacity: 90%;
-    align-items: center;
-    display: flex;
-    color:#ffffff;
-}
-
-/*progress bar*/
-.progress-container {
-    width: 100%;
-    background-color: transparent;
-    height: 5px;
-    display: block;
-}
-.progress-bar {
-    background-color: red;
-    width: 0%;
-    display: block;
-    height: inherit;
-}
-  
-/* Apply styles to the header section */
-.header {
-    background-color: #333;
-    opacity: 90%;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-  
-.header img {
-    height: 50px;
-    margin-right: 10px;
-}
-  
-/* Apply styles to the grid container*/
-.grid-container {
-    display: grid;
-    grid-auto-columns: calc(50vw - 10px);
-    grid-gap: 10px;
-    padding: 10px;
-}
-  
-/* Apply styles to the grid items */
-.grid-item {
-    background-color: #7a6767;
-    border: 1px solid #5e4e4e;
-    opacity: 80%; 
-    padding: 20px;
-}
-  
-.grid-item h1 {
-    margin-top: 0;
-}
-  
-.MercuryTitle h1,
-.VenusSubtext h3 {
-    margin-bottom: 0;
-}
-  
-.grid-item .img {
-    display: block;
-    margin: 0 auto;
-    max-width: 25%;
-    height: auto;
-}
-  
-/* Apply styles to the earth grid item */
-#earth {
-    grid-column: span 2;
-}
-  
-/* Apply styles to the website title */
-h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: normal;
-}
-  
-/* Apply styles to the planet subtext */
-.grid-item h3 {
-    font-size: 16px;
-    line-height: 1.4;
-    margin-top: 20px;
-}
-  
-/* Apply styles to the planet titles */
-#earth h2,
-#mercury .MercuryTitle h1,
-#venus .MercuryTitle h1,
-#mars h1,
-#jupiter h1 {
-    margin-bottom: 20px;
-    font-size: 32px;
+@font-face {
+    font-family: Calibre;
+    src: url(fonts/Calibre-Bold.ttf);
 }
 
 @keyframes inandout {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {opacity: 0;}
+    25% {opacity: 0.5;}
+    50% {opacity: 1;}
+    75% {opacity: 0.5;}
+    100% {opacity: 0;}
 }
 
+@keyframes spaceletters {
+    from {letter-spacing: normal;}
+    to {letter-spacing: 40px;}
+}
+
+ /*----Tag-based----*/
+body {
+    background-color:rgb(8, 3, 43);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 2px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+a {
+    font-family: Manrope;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    padding: 25px;
+    transition: color 400ms ease-in-out;
+    transition: background-color 400ms ease-in-out;
+    transition: box-shadow 400ms ease-in-outs;
+}
+
+a:hover {
+    color: white;
+    background-color: red;
+    box-shadow: 5px 5px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+/*----id-based----*/
+
+#welcomeHeader {
+    font-family: Space Mono;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+#welcomeHeader2 {
+    font-family: Space Mono;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    animation: spaceletters 1s ease-in-out 0.5s 1 normal forwards;
+}
+
+#welcomeHeader2 #compName {
+    background-color: red;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #ff0000, hwb(24 0% 0%));
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
 
 #cursor {
-    opacity: 1;
     animation-name: inandout;
-    animation-duration: 1.25s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #container {
-    margin: 50px;
-    margin-bottom: 10px;
-    position: relative;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
 }
+
+#exploreButton {
+    position: relative;
+    margin-top: 50%;
+    left: calc(50% - 104px);
+}
+
+#welcomeText {
+    font-family: Calibre;
+    color: white;
+    text-align: center;
+}
+
+#endSpace {
+    color: rgb(8, 3, 43);
+    content: "you can't see me. im john cena.";
+}
+
+/*---class-specific---*/
+.triangle_down {
+    position: relative;
+    top: -5px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-right: 0.2em solid rgb(255, 255, 255);
+    border-top: 0.2em solid rgb(255, 255, 255);
+    transform: rotate(135deg);
+    left: 50%;
+    margin-bottom: 15%;
+    animation-name: inandout;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+
+/*---nav-bar---*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 70px;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: transparent;
+  }
+  
+  .logo img {
+    margin-right: 10px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: solid;
+  }
+  
+  .nav-links {
+    display: flex;
+    width: 650px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    background-color: transparent;
+    transition: none;
+    padding-bottom: 10px;
+  }
+  
+  .nav-links a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: solid;
+  }
+
+  .nav-links a:hover::before {
+    width: 100%;
+  }
+  
+  .signup a {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  .signup a:hover {
+    background-color: white;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      /*! bottom: 0px; */
+      top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      background-color: black;
+      margin: 0px;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+  
+    .nav-links li {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0%);
+      visibility: visible;
+    }
+  
+    .nav-links.active li {
+      opacity: 1;
+      transition: opacity 0.5s ease 0.3s;
+    }
+  
+    .line-1.change {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .line-2.change {
+      opacity: 0;
+    }
+    
+    .line-3.change {
+      transform: rotate(45deg) translate(-5px, -6px);
+    } 
+  
+    .signup a {
+      background-color: white;
+      color: black;
+      padding: 8px 16px;
+    }
+  }
+
+/*---footer---*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 70px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    background-color: transparent;
+    transition: none;
+    padding-bottom: 10px;
+  }
+  
+  .footer-links a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-links a:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: solid;
+  }
