@@ -162,7 +162,7 @@ h1 {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: rgba(0,0,0,0);
+    color: transparent;
   }
   
   .logo img {
@@ -174,7 +174,9 @@ h1 {
     color: white;
     font-size: 30px;
     font-weight: bold;
-    background-color: rgba(0,0,0,0)
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: solid;
   }
   
   .nav-links {
@@ -195,8 +197,9 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
     transition: none;
+    padding-bottom: 10px;
   }
   
   .nav-links a::before {
@@ -204,7 +207,7 @@ h1 {
     display: block;
     height: 3px;
     width: 0%;
-    background-color: blue;
+    background-color: red;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -228,6 +231,9 @@ h1 {
     padding: 8px 16px;
     border-radius: 20px;
   }
+  .signup a:hover {
+    background-color: white;
+  }
   
   .hamburger {
     display: none;
@@ -242,7 +248,7 @@ h1 {
     transition: all 0.3s ease;
   }
   
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1100px) {
     .nav-links {
       position: absolute;
       right: 0px;
