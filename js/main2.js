@@ -10,6 +10,76 @@ function compute_pos_z(start_ang, rad, timestep, ang_vel) {
     return new_z;
 }
 
+function new_obj(rad, colors, name, shiny) {
+    if (shiny)
+    {    var pinkMat1 = new THREE.MeshPhongMaterial({
+            color: colors[0],
+            emissive: 0xF66120,
+            specular: 0xFFED22,
+            shininess: 10,
+            shading: THREE.FlatShading,
+            transparent: 1,
+            opacity: 1
+        });
+        var pinkMat2 = new THREE.MeshPhongMaterial({
+            color: colors[1],
+            emissive: 0xF66120,
+            specular: 0xFFED22,
+            shininess: 10,
+            shading: THREE.FlatShading,
+            transparent: 1,
+            opacity: 1
+        });
+        var pinkMat3 = new THREE.MeshPhongMaterial({
+            color: colors[2],
+            emissive: 0xF66120,
+            specular: 0xFFED22,
+            shininess: 10,
+            shading: THREE.FlatShading,
+            transparent: 1,
+            opacity: 1
+        });
+    }
+    else {
+        var pinkMat1 = new THREE.MeshLambertMaterial({
+            color: colors[0],
+            emissive: colors[0],
+            shading: THREE.FlatShading,
+        });
+        var pinkMat2 = new THREE.MeshLambertMaterial({
+            color: colors[1],
+            emissive: colors[1],
+            shading: THREE.FlatShading,
+        });
+        var pinkMat3 = new THREE.MeshLambertMaterial({
+            color: colors[2],
+            emissive: colors[2],
+            shading: THREE.FlatShading,
+        });
+    }
+    var obj1 = new THREE.Mesh(new THREE.IcosahedronGeometry(rad, 1), pinkMat1);
+    var obj2 = new THREE.Mesh(new THREE.IcosahedronGeometry(rad, 1), pinkMat2);
+    var obj3 = new THREE.Mesh(new THREE.IcosahedronGeometry(rad, 1), pinkMat3);
+    var group = new THREE.Group();
+    group.add(obj1);
+    group.add(obj2)
+    group.add(obj3)
+
+    var light = new THREE.DirectionalLight(0xffffff, 0.1);
+    light.position.set(1, 1, 1);
+    group.add(light);
+
+    group.name = name;
+
+    return group
+}
+
+function update_rotation(object, amt) {
+    object.children[0].rotation.x+=amt
+    object.children[1].rotation.y+=amt
+    object.children[2].rotation.z+=amt
+}
+
 window.addEventListener('load', function() {
     if (!Detector.webgl) Detector.addGetWebGLMessage();
 
@@ -27,9 +97,9 @@ window.addEventListener('load', function() {
     (function init() {
         // renderer
         renderer = new THREE.WebGLRenderer({
-            antialias: true//,
+            antialias: true,
             //preserveDrawingBuffer: true,  // so canvas.toBlob() make sense
-            //alpha:true,   // so png background is transparent
+            alpha:true,   // so png background is transparent
         });
         renderer.setPixelRatio(window.devicePixelRatio);
         container = document.getElementById('container');
@@ -49,51 +119,27 @@ window.addEventListener('load', function() {
         camera.lookAt(new THREE.Vector3(0, 0, 0));
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-        // lights
-        //light = new THREE.DirectionalLight(0xffffff);
-        //light.position.set(1, 1, 1);
-        //scene.add(light);
-        //light = new THREE.DirectionalLight(0x002288);
-        //light.position.set(-1, -1, -1);
-        //scene.add(light);
-        //light = new THREE.AmbientLight(0x222222);
-        //scene.add(light);
-
-
         raycaster = new THREE.Raycaster();
         
         // Sun (Scene -> Sun)
-        var sungeometry = new THREE.SphereGeometry(4, 50, 50);
-        
-        var sunmaterial = new THREE.MeshBasicMaterial({color: 0xffff00 });
-        var sun = new THREE.Mesh(sungeometry, sunmaterial);
-        sun.name = "sun";
+        var sun = new_obj(4, [0xffff00, 0xffff00, 0xffff00], "sun", 1);
         scene.add(sun);
 
         // Mercury (Scene -> Mercury)
-        var mercurygeometry = new THREE.SphereGeometry(0.5, 50, 50);
-        var mercurymaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/mercury.jpg")});
-        var mercury = new THREE.Mesh(mercurygeometry, mercurymaterial);
-        mercury.name = "mercury";
+        var mercury = new_obj(0.5, [0xb1adad, 0xb1adad, 0xb1adad], "mercury", 0);
         scene.add(mercury);
 
         // Venus (Scene -> Venus)
-        var venusgeometry = new THREE.SphereGeometry(1, 50, 50);
-        var venusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/venus.jpg")});
-        var venus = new THREE.Mesh(venusgeometry, venusmaterial);
-        venus.name = "venus";
+        var venus = new_obj(1, [0xa57c1b, 0xa57c1b, 0xa57c1b], "venus", 1);
         scene.add(venus);
 
         // Earth (Scene -> Earth)
-        var earthgeometry = new THREE.SphereGeometry(1, 50, 50);
-        var earthmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/earth.jpg")});
-        var earth = new THREE.Mesh(earthgeometry, earthmaterial);
-        earth.name = "earth";
+        var earth = new_obj(1, [0x00FF00, 0x00FF00, 0x00FFFF], "earth", 0);
         scene.add(earth);
 
         // Moon (Scene -> Earth -> Moon)
         var moongeometry = new THREE.SphereGeometry(0.25, 50, 50);
-        var moonmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/moon.jpg")});
+        var moonmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/moon.jpg")});
         var moon = new THREE.Mesh(moongeometry, moonmaterial);
         moon.name = "moon";
         moon.position.x = 2;
@@ -101,21 +147,21 @@ window.addEventListener('load', function() {
 
         // Mars (Scene -> Mars)
         var marsgeometry = new THREE.SphereGeometry(0.7, 50, 50);
-        var marsmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/mars.jpg")});
+        var marsmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/mars.jpg")});
         var mars = new THREE.Mesh(marsgeometry, marsmaterial);
         mars.name = "mars";
         scene.add(mars);
 
         // Jupiter (Scene -> Jupiter)
         var jupitergeometry = new THREE.SphereGeometry(2, 50, 50);
-        var jupitermaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/jupiter.jpg")});
+        var jupitermaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/jupiter.jpg")});
         var jupiter = new THREE.Mesh(jupitergeometry, jupitermaterial);
         jupiter.name = "jupiter";
         scene.add(jupiter);
 
         // Saturn (Scene -> Saturn)
         var saturngeometry = new THREE.SphereGeometry(1.4, 50, 50);
-        var saturnmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/saturn.jpg")});
+        var saturnmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/saturn.jpg")});
         var saturn = new THREE.Mesh(saturngeometry, saturnmaterial);
         saturn.name = "saturn";
         scene.add(saturn);
@@ -129,13 +175,13 @@ window.addEventListener('load', function() {
 
         // Uranus (Scene -> Uranus)
         var uranusgeometry = new THREE.SphereGeometry(0.5, 50, 50);
-        var uranusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/uranus.jpg")});
+        var uranusmaterial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/uranus.jpg")});
         var uranus = new THREE.Mesh(uranusgeometry, uranusmaterial);
         scene.add(uranus);
 
         // Neptune (Scene -> Neptune)
         var neptunegeometry = new THREE.SphereGeometry(0.5, 50, 50);
-        var neptunematerial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planets_imgs/neptune.jpg")});
+        var neptunematerial = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("static/rotating_planet_imgs/neptune.jpg")});
         var neptune = new THREE.Mesh(neptunegeometry, neptunematerial);
         scene.add(neptune);
 
@@ -153,10 +199,11 @@ window.addEventListener('load', function() {
         const path = new THREE.Mesh( mercurypathgeometry, pathmaterial );
         path.rotation.x=Math.PI/2;
         scene.add( path );
+    
 
-        camera.position.z=20;
-        camera.position.y=0;
-        camera.position.x=-55;
+        camera.position.z=10;
+        camera.position.y=5;
+        camera.position.x=-38;
         camera.lookAt(0, 0, 0);
 
         window.addEventListener('resize', onWindowResize, false);
@@ -228,14 +275,13 @@ window.addEventListener('load', function() {
 
     (function animate() {
         requestAnimationFrame(animate);
+        update_rotation(scene.children[0], 0.005);
 
-        scene.children[0].rotation.y+=0.005;
-
-        scene.children[1].rotation.y+=0.008;
+        update_rotation(scene.children[1], 0.008)
         scene.children[1].position.x = compute_pos_x(45, 7, timestep, 0.05);
         scene.children[1].position.z = compute_pos_z(45, 7, timestep, 0.05);
         
-        scene.children[2].rotation.y+=0.008;
+        update_rotation(scene.children[2], 0.008)
         scene.children[2].position.x = compute_pos_x(315, 9, timestep, 0.045);
         scene.children[2].position.z = compute_pos_z(315, 9, timestep, 0.045);
     
