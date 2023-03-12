@@ -322,6 +322,35 @@ h1 {
       padding: 8px 16px;
     }
   }
+  .teamPictureContainer{
+    max-width: 25%;
+    align-content: center;
+    background-color: white;
+    align-self: center;
+  }
+  .teamPictureContainer img{
+    max-width: 100%;
+  }
+  .pictureContainer img{
+    max-width: 50%;
+    
+  }
+  .pictureContainer {
+    background-color: white;
+    max-width: 25%;
+    font-family: calibri;
+    margin-right: 1rem;
+    display: flex;
+    float: right;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+
+
+
+  }
+  .mainBody{
+    float: bottom;
+  }
 
 /*---footer---*/
 footer {
