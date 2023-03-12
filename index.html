@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
 		<title>Terra Ultra</title>
-		<link rel="icon" href="websiteIcon.ico" type="image/icon type">
-
-		<link rel="stylesheet" href="styles.css">
-	</head>
-	<!--menu!-->
-	<script src="js/menuControl.js"></script>
-	<nav class="sticky-top">
-		
-		<ul>
-		  <li><a href="index.html">Terra Ultra</a></li>
-		  <li><a href="info.html">Home</a></li>
-		  <li><a href="services.html">Services</a></li>
-		  <li><a href="about.html">About Us</a></li>
-		</ul>
-	  </nav>
-<!--End of Menu-->
-	<body style="overflow-y: hidden; overflow-x: hidden;">
+		<link rel="icon" href="/static/websiteIcon.ico" type="image/icon type">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <img src="/static/websiteIcon.ico" alt="logo" width="40">
+        <li><a href="/index.html">TERRA ULTRA</a></li>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/missions.html">Missions</a></li>
+        <li class="signup"><a href="/register.html">Register</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+    </nav>
+    <main>
 		<h1 id="welcomeHeader">Welcome to</h1>
 		<h1 id = "welcomeHeader2">Terra Ultra<span id = "cursor"> █</span></h1>
         <h2 id="welcomeText">Bridging the Gap Between Earth and the Beyond</h2>
@@ -30,5 +36,7 @@
 		  <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
 		  <script type="module" src="js/main2.js"></script>
 		  <a href="info.html" id="exploreButton">Start Exploring!</a>
-	</body>
+    </main>
+    <script type="text/javascript" href="/js/navbar.js"></script>
+  </body>
 </html>

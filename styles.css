@@ -132,58 +132,160 @@
     position: relative;
 }
 
-/*menu*/
-.sticky-top{
-    height: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-out;
-    z-index: 999;
-    opacity: 90%;
-}
-  
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Nav Bar */
+.nav {
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 70px;
+    padding-left: 30px;
+    position: relative;
+  }
   
-nav ul li {
-    margin: 0 10px;
-}
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
   
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: Manrope;
+  .logo img {
+    margin-right: 10px;
+  }
+  
+  .logo a {
     font-size: 30px;
-    font-weight: 600;
-}
-
-nav ul li button {
-    color: #000000;
+  }
+  
+  .nav-links {
+    display: flex;
+    width: 400px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .nav-links a {
+    color: white;
     text-decoration: none;
-    background-color: transparent;
-    padding: 0px;
-    border: none;
-    font-family: Manrope;
-    font-size: 30px;
-    font-weight: 600;
-}
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
   
-.menu-hidden {
-    transform: translateY(-100%);
-}
+  .nav-links a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: blue;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
   
-.menu-visible {
-    transform: translateY(0);
-}
+  .nav-links a:hover::before {
+    width: 100%;
+  }
+  
+  .signup a {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 100vh;
+      top: 70px;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 160px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+  
+    .nav-links li {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0%);
+      visibility: visible;
+    }
+  
+    .nav-links.active li {
+      opacity: 1;
+      transition: opacity 0.5s ease 0.3s;
+    }
+  
+    .line-1.change {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .line-2.change {
+      opacity: 0;
+    }
+    
+    .line-3.change {
+      transform: rotate(45deg) translate(-5px, -6px);
+    } 
+  
+    .signup a {
+      background-color: white;
+      color: black;
+      padding: 8px 16px;
+    }
+  }
+  
   
 /*Something...*/
 #main-content {
@@ -215,16 +317,21 @@ nav ul li button {
 }
 
 /* Apply general styles to the page */
-html {
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
 }
+
 body {
-  background-image: url("images/background1.jpg");
+  background-color: black;
   background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     min-height: 100%;
+  color: white;
 }
 
 .pictureContainer {

@@ -1,0 +1,12 @@
+index.html 
+    welcome page, rotating planets, start exploring -> home.html
+home.html
+    broader company overview and stuff, news page, etc.
+about.html
+    company mission, members, etc.
+missions.html
+    information on all the seperate missions
+registration.html
+    interactive mission selection form (pricing, loacation, times, etc.)
+
+privacy.html and more need to find a place in the footer or Something
