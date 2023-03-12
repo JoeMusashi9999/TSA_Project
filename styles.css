@@ -1,49 +1,11 @@
-/*fonts!*/
-/*
-@font-face {
-    font-family: Manrope;
-    src: url(fonts/AquireBold-8Ma60.otf);
-} 
-@font-face {
-    font-family: Manrope;
-    src: url(fonts/Aquire-BW0ox.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
-*/
 @font-face {
     font-family: Manrope;
     src: url(fonts/Akira.otf);
 }
-/*title segment*/
-.company-name-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-} 
-.company-name {
-    text-align: center;
-    font-family: Manrope;
-    font-size: 450%;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px #000000;
-}
-.float-up {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-}
-.float-down {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-}
 
+<<<<<<< HEAD
 
 
 /*explore stuff*/
@@ -319,24 +281,380 @@ h2 {
 #jupiter h1 {
     margin-bottom: 20px;
     font-size: 32px;
+=======
+@font-face {
+    font-family: Calibre;
+    src: url(fonts/Calibre-Bold.ttf);
+>>>>>>> b8db2b937dc4399c70eb22b9f46496774e52eb1f
 }
 
 @keyframes inandout {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {opacity: 0;}
+    25% {opacity: 0.5;}
+    50% {opacity: 1;}
+    75% {opacity: 0.5;}
+    100% {opacity: 0;}
 }
 
+@keyframes spaceletters {
+    from {letter-spacing: normal;}
+    to {letter-spacing: 40px;}
+}
+
+ /*----Tag-based----*/
+body {
+    background-color:rgb(8, 3, 43);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 2px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    margin: 0px;
+    padding-bottom: 60px;
+}
+
+a {
+    font-family: Manrope;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    padding: 25px;
+    transition: color 400ms ease-in-out;
+    transition: background-color 400ms ease-in-out;
+    transition: box-shadow 400ms ease-in-outs;
+}
+
+a:hover {
+    color: white;
+    background-color: red;
+    box-shadow: 5px 5px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+/*----id-based----*/
+
+#welcomeHeader {
+    font-family: Space Mono;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+#welcomeHeader2 {
+    font-family: Space Mono;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    animation: spaceletters 1s ease-in-out 0.5s 1 normal forwards;
+}
+
+#welcomeHeader2 #compName {
+    background-color: red;
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #ff0000, hwb(24 0% 0%));
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
 
 #cursor {
-    opacity: 1;
     animation-name: inandout;
-    animation-duration: 1.25s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #container {
-    margin: 50px;
-    margin-bottom: 10px;
-    position: relative;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
 }
+
+#exploreButton {
+    position: relative;
+    margin-top: 50%;
+    left: calc(50% - 104px);
+}
+
+#welcomeText {
+    font-family: Calibre;
+    color: white;
+    text-align: center;
+}
+
+#endSpace {
+    color: rgb(8, 3, 43);
+    content: "you can't see me. im john cena.";
+}
+
+/*---class-specific---*/
+.triangle_down {
+    position: relative;
+    top: -5px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-right: 0.2em solid rgb(255, 255, 255);
+    border-top: 0.2em solid rgb(255, 255, 255);
+    transform: rotate(135deg);
+    left: 50%;
+    margin-bottom: 15%;
+    animation-name: inandout;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+
+/*---nav-bar---*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 70px;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: transparent;
+  }
+  
+  .logo img {
+    margin-right: 10px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: solid;
+  }
+  
+  .nav-links {
+    display: flex;
+    width: 650px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    background-color: transparent;
+    transition: none;
+    padding-bottom: 10px;
+  }
+  
+  .nav-links a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: solid;
+  }
+
+  .nav-links a:hover::before {
+    width: 100%;
+  }
+  
+  .signup a {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  .signup a:hover {
+    background-color: white;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      /*! bottom: 0px; */
+      top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      background-color: black;
+      margin: 0px;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+  
+    .nav-links li {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0%);
+      visibility: visible;
+    }
+  
+    .nav-links.active li {
+      opacity: 1;
+      transition: opacity 0.5s ease 0.3s;
+    }
+  
+    .line-1.change {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .line-2.change {
+      opacity: 0;
+    }
+    
+    .line-3.change {
+      transform: rotate(45deg) translate(-5px, -6px);
+    } 
+  
+    .signup a {
+      background-color: white;
+      color: black;
+      padding: 8px 16px;
+    }
+  }
+
+/*---footer---*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: transparent;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-middle {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .footer-container a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 0px;
+    background-color: transparent;
+  }
+  
+  .footer-container a:hover {
+    text-decoration: underline;
+    box-shadow: none;
+  }
+  
+  .goog-te-gadget-icon {
+    background-image: none !important;
+  }
+
+  .goog-te-gadget-simple {
+    background-color: black !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+  }
+
+  .goog-te-gadget-simple span a{
+    color: white !important;
+  }
