@@ -322,42 +322,47 @@ h1 {
   }
 
 /*---footer---*/
-.footer {
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+  }
+  
+  .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    height: 70px;
-    padding-left: 30px;
-    position: relative;
+    height: 60px;
+    padding: 0 20px;
+    background-color: transparent;
   }
-  .footer-links a {
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-middle {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .footer-container a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
+    margin: 0 10px;
+    padding: 0px;
     background-color: transparent;
-    transition: none;
-    padding-bottom: 10px;
   }
   
-  .footer-links a::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: red;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: all 0.5s ease;
-  }
-  
-  .footer-links a:hover {
-    background-color: transparent;
-    border: none;
+  .footer-container a:hover {
+    text-decoration: underline;
     box-shadow: none;
-    text-decoration: solid;
   }
+  
+  .goog-te-gadget {
+    font-size: 14px;
+  } 
