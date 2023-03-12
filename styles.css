@@ -369,36 +369,36 @@ footer {
   }
 
   .goog-te-combo {
-    border-radius: 20px;
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    border: none;
+    border-radius: 20px !important;
+    background-color: #333 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: none !important;
   }
   
   .goog-te-combo-arrow {
-    background-image: none;
-    border: none;
+    background-image: none !important;
+    border: none !important;
   }
   
   .goog-te-menu-value span {
-    padding: 0px;
-    margin: 0px;
+    padding: 0px !important;
+    margin: 0px !important;
   }
   
   .goog-te-menu2-item {
-    padding: 10px;
+    padding: 10px !important;
   }
   
   .goog-te-menu2 {
-    margin-top: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px !important;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2) !important;
   }
   
   .goog-te-menu2-item:hover {
-    background-color: #eee;
+    background-color: #eee !important;
   }
   
   .goog-te-menu2-item span:hover {
-    color: #333;
+    color: #333 !important;
   }
