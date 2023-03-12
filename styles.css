@@ -152,7 +152,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
     color: white;
     height: 70px;
     padding-left: 30px;
@@ -174,11 +173,12 @@ h1 {
     color: white;
     font-size: 30px;
     font-weight: bold;
+    background-color: rgba(0,0,0,0)
   }
   
   .nav-links {
     display: flex;
-    width: 400px;
+    width: 650px;
   }
   
   .nav-links li {
@@ -194,6 +194,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    background-color: rgba(0,0,0,0);
+    transition: none;
   }
   
   .nav-links a::before {
