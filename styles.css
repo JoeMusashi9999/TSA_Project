@@ -44,37 +44,7 @@
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-/*start of popups - unused*/
-#popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;  
-}
-  
-#popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
-}
-  
-#popup h2 {
-    margin-top: 0;
-}
-  
-#popup-close-button {
-    margin-top: 20px;
-}
+
 
 /*explore stuff*/
 #exploreButton {
@@ -83,7 +53,10 @@
     color: red;
     background-color: white;
     text-decoration: none;
-    padding: 25px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     transition: color 400ms;
     transition: background-color 400ms;
     transition: box-shadow 400ms;
@@ -103,7 +76,7 @@
     color: white;
     position: relative;
     font-family: Manrope;
-    font-size: 60px;
+    font-size: 60rem;
     text-align: center;   
     margin-top: 75px;
     margin-bottom: 0px;
@@ -227,6 +200,12 @@ body {
 }
 
 .pictureContainer {
+    display: flex;
+    float: right;
+    padding: 20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding-bottom: 20px;
     background-color: #ffffff;
     opacity: 90%;
     display: absolute;
@@ -234,8 +213,11 @@ body {
     max-width: 25%;
     align-items: center;
 }
-
+.pictureContainer p {
+    clear: both;
+}
 .pictureContainer img {
+    
     height: auto;
     max-width: 100%;
     margin-right: 10px;
