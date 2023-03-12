@@ -34,6 +34,7 @@ body {
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     margin: 0px;
+    padding-bottom: 60px;
 }
 
 a {
@@ -324,7 +325,7 @@ h1 {
 
 /*---footer---*/
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: black;
