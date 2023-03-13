@@ -179,6 +179,8 @@ h1 {
     background-color: transparent;
     box-shadow: none;
     text-decoration: solid;
+    padding-left: 0px;
+    padding-right: 20px;
   }
   
   .nav-links {
