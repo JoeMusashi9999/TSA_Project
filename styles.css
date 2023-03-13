@@ -437,6 +437,12 @@ footer {
     position: absolute !important;
   }
 
+  .translate-button {
+    margin: 0px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .translate-button a::before {
     background-color: transparent;
   }
