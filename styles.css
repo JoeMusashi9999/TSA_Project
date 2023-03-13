@@ -185,6 +185,8 @@ h1 {
   
   .nav-links {
     display: flex;
+    padding-left: 0px;
+    margin-right: 10px;
   }
   
   .nav-links li {
@@ -427,6 +429,12 @@ footer {
 
   .goog-te-gadget-simple span a{
     color: white !important;
+  }
+
+  body iframe[title="Language Translate Widget"] {
+    bottom: 60px;
+    top: auto !important;
+    position: absolute !important;
   }
 
 
