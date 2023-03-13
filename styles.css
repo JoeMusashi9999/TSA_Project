@@ -437,6 +437,10 @@ footer {
     position: absolute !important;
   }
 
+  .translate-button a::before {
+    background-color: transparent;
+  }
+
 
 /* News Section styling*/
 b {
