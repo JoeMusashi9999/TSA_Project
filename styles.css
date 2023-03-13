@@ -179,11 +179,14 @@ h1 {
     background-color: transparent;
     box-shadow: none;
     text-decoration: solid;
+    padding-left: 0px;
+    padding-right: 20px;
   }
   
   .nav-links {
     display: flex;
-    width: 650px;
+    padding-left: 0px;
+    margin-right: 10px;
   }
   
   .nav-links li {
@@ -254,7 +257,6 @@ h1 {
     .nav-links {
       position: absolute;
       right: 0px;
-      /*! bottom: 0px; */
       top: 70px;
       display: flex;
       flex-direction: column;
@@ -297,11 +299,13 @@ h1 {
     .nav-links.active {
       transform: translateX(0%);
       visibility: visible;
+      padding-bottom: 10px;
     }
   
     .nav-links.active li {
       opacity: 1;
       transition: opacity 0.5s ease 0.3s;
+      padding: 5px;
     }
   
     .line-1.change {
@@ -398,15 +402,32 @@ footer {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     background-color: transparent;
+    position: relative;
   }
   
   .footer-container a:hover {
-    text-decoration: underline;
     box-shadow: none;
   }
-  
+
+  .footer-container a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  .footer-container a:hover::before {
+    width: 100%;
+  }
+
   .goog-te-gadget-icon {
     background-image: none !important;
   }
@@ -421,6 +442,22 @@ footer {
 
   .goog-te-gadget-simple span a{
     color: white !important;
+  }
+
+  body iframe[title="Language Translate Widget"] {
+    bottom: 60px;
+    top: auto !important;
+    position: absolute !important;
+  }
+
+  .translate-button {
+    margin: 0px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .translate-button a::before {
+    background-color: transparent;
   }
 
 
@@ -445,4 +482,87 @@ p1 {
   color:white; 
 }
 
+/*---Privacy Policy---*/
+.privacy-container {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  width: 75%;
+  height: auto;
+  overflow: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.privacy-container h1 {
+  color: red;
+  font-family: Calibre;
+}
+
+.privacy-container h2 {
+  font-family: Calibre;
+}
+
+.privacy-container p {
+  font-family: Space Mono;
+}
+
+/*---Missions Page---*/
+.planet-containers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.planet-containers > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.planet-containers a {
+  all: unset;
+}
+
+.planet-containers > div h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  z-index: 1;
+  font-family: Calibre;
+}
+
+.planet-containers > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.planet-containers > div:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .planet-containers {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
