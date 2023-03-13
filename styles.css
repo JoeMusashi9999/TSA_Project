@@ -183,7 +183,6 @@ h1 {
   
   .nav-links {
     display: flex;
-    width: 650px;
   }
   
   .nav-links li {
@@ -254,7 +253,6 @@ h1 {
     .nav-links {
       position: absolute;
       right: 0px;
-      /*! bottom: 0px; */
       top: 70px;
       display: flex;
       flex-direction: column;
@@ -297,11 +295,13 @@ h1 {
     .nav-links.active {
       transform: translateX(0%);
       visibility: visible;
+      padding-bottom: 10px;
     }
   
     .nav-links.active li {
       opacity: 1;
       transition: opacity 0.5s ease 0.3s;
+      padding: 5px;
     }
   
     .line-1.change {
