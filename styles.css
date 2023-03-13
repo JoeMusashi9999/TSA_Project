@@ -468,3 +468,34 @@ b:hover {
 p1 {
   color:white; 
 }
+
+/*---Privacy Policy---*/
+.privacy-container {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  width: 75%;
+  height: auto;
+  overflow: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.privacy-container h1 {
+  color: red;
+  font-family: Calibre;
+}
+
+.privacy-container h2 {
+  font-family: Calibre;
+}
+
+.privacy-container p {
+  font-family: Space Mono;
+}
