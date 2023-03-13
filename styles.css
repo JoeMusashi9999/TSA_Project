@@ -503,14 +503,16 @@ p1 {
 /*---Missions Page---*/
 .planet-containers {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 20px;
   justify-items: center;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  margin: 50px;
+  margin: 0 auto; /* center the grid */
+  max-width: 1200px; /* limit the width of the grid */
+  padding: 20px; /* add spacing on the sides */
 }
 
 .planet-containers > div {
@@ -530,7 +532,6 @@ p1 {
   color: white;
   z-index: 1;
   font-family: Calibre;
-  font-size: 25px;
 }
 
 .planet-containers > div img {
@@ -546,7 +547,7 @@ p1 {
 
 @media (max-width: 768px) {
   .planet-containers {
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-template-rows: repeat(4, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
