@@ -510,9 +510,8 @@ p1 {
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 auto; /* center the grid */
-  max-width: 1200px; /* limit the width of the grid */
-  padding: 20px; /* add spacing on the sides */
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .planet-containers > div {
@@ -521,6 +520,9 @@ p1 {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+}
+.planet-containers a {
+  all: unset;
 }
 
 .planet-containers > div h1 {
