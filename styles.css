@@ -179,11 +179,14 @@ h1 {
     background-color: transparent;
     box-shadow: none;
     text-decoration: solid;
+    padding-left: 0px;
+    padding-right: 20px;
   }
   
   .nav-links {
     display: flex;
-    width: 650px;
+    padding-left: 0px;
+    margin-right: 10px;
   }
   
   .nav-links li {
@@ -254,7 +257,6 @@ h1 {
     .nav-links {
       position: absolute;
       right: 0px;
-      /*! bottom: 0px; */
       top: 70px;
       display: flex;
       flex-direction: column;
@@ -297,11 +299,13 @@ h1 {
     .nav-links.active {
       transform: translateX(0%);
       visibility: visible;
+      padding-bottom: 10px;
     }
   
     .nav-links.active li {
       opacity: 1;
       transition: opacity 0.5s ease 0.3s;
+      padding: 5px;
     }
   
     .line-1.change {
@@ -385,15 +389,32 @@ footer {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     background-color: transparent;
+    position: relative;
   }
   
   .footer-container a:hover {
-    text-decoration: underline;
     box-shadow: none;
   }
-  
+
+  .footer-container a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  .footer-container a:hover::before {
+    width: 100%;
+  }
+
   .goog-te-gadget-icon {
     background-image: none !important;
   }
@@ -408,6 +429,22 @@ footer {
 
   .goog-te-gadget-simple span a{
     color: white !important;
+  }
+
+  body iframe[title="Language Translate Widget"] {
+    bottom: 60px;
+    top: auto !important;
+    position: absolute !important;
+  }
+
+  .translate-button {
+    margin: 0px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .translate-button a::before {
+    background-color: transparent;
   }
 
 
@@ -431,5 +468,3 @@ b:hover {
 p1 {
   color:white; 
 }
-
-
