@@ -15,9 +15,9 @@ function getNews() {
                 document.getElementById("output").innerHTML +=
           "<center><div style = 'padding-top: 20px; background-color: #1d1919;padding: 10px;max-width:70%; border-radius: 15px; margin-right: 15px;margin-bottom: 10px;margin-left: 0;margin-top: 0; overflow:hidden;display:inline-flex;flex-wrap:wrap;'>" +
             
-          "<b href='" + response.data[b].url + "' target='_blank'>"+ 
+          "<a href='" + response.data[b].url + "' target='_blank' class='news-entry'><b>"+ 
 
-          response.data[b].title +"</b>" +
+          response.data[b].title +"</b></a>" +
             
           "<img onerror=this.style.display='none'; style='max-width: 100%; alt='';margin: 0;' src=" +
           response.data[b].image +
