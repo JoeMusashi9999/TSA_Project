@@ -526,9 +526,18 @@ p1 {
 .company-info {
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 20px;
   padding: 20px;
-  width: 80%;
+  width: span;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.company-info h1 {
+  color: red;
+  font-family: Calibre;
+  font-size: 300%;
 }
 
 .about-containers {
