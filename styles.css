@@ -1,3 +1,4 @@
+/*---Fonts-&-Frames---*/
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 @font-face {
@@ -23,7 +24,9 @@
     to {letter-spacing: 40px;}
 }
 
- /*----Tag-based----*/
+
+
+/*---General---*/
 body {
     background-color:rgb(8, 3, 43);
     background-image:
@@ -58,8 +61,9 @@ h1 {
     margin: 10px;
 }
 
-/*----id-based----*/
 
+
+/*---Launch-Page---*/
 #welcomeHeader {
     font-family: Space Mono;
     font-size: 80px;
@@ -129,7 +133,6 @@ h1 {
     content: "you can't see me. im john cena.";
 }
 
-/*---class-specific---*/
 .triangle_down {
     position: relative;
     top: -5px;
@@ -149,7 +152,8 @@ h1 {
   }
 
 
-/*---nav-bar---*/
+
+/*---Nav-Bar---*/
 .nav {
     display: flex;
     justify-content: space-between;
@@ -300,6 +304,7 @@ h1 {
       transform: translateX(0%);
       visibility: visible;
       padding-bottom: 10px;
+      z-index: 100;
     }
   
     .nav-links.active li {
@@ -326,58 +331,10 @@ h1 {
       padding: 8px 16px;
     }
   }
-  .teamPictureContainer{
-    max-width: 50%;
-    align-items: center;
-    background-color: white;
-    margin-right: 25%;
-    margin-left: 25%;
-    text-align: center;
-
-  }
-  
-  .teamPictureContainer img{
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .pictureContainer img{
-    max-width: 50%;
-    margin-right: 1rem;
-    display: block;
-    object-fit: contain;
-    
-    
-  }
-  
-
-  .pictureContainer {
-    background-color: white;
-    max-width: 22.1%;
-    font-family: calibri;
-    margin-right: 1%;
-    display: flex;
-    float: left;
-    padding: 1rem;
-    padding-bottom: 0.5rem;
 
 
 
-  }
-  .mainBody{
-    background-color: white;
-    text-align: center;
-    position: absolute;
-    max-width: 50%;
-    margin: 0 auto;
-    display: block;
-    
-  }
-
-/*---footer---*/
-#footer {
-  clear: both;
- 
-}
+/*---Footer---*/
 footer {
   
     clear: both;
@@ -470,8 +427,52 @@ footer {
     background-color: transparent;
   }
 
+  @media (max-width: 980px) {
+    .footer-container {
+      flex-wrap: wrap;
+      height: 160px;
+    }
+    
+    .footer-left {
+      order: 2;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    
+    .footer-middle {
+      order: 1;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .footer-right {
+      order: 3;
+      width: 100%;
+      justify-content: center
+    }
+    
+    .footer-right a:first-child {
+      margin-bottom: 10px;
+    }
+    
+    .footer-right a:last-child {
+      margin-bottom: 0;
+    }
 
-/* News Section styling*/
+    body {
+      padding-bottom: 160px;
+    }
+
+    body iframe[title="Language Translate Widget"] {
+      bottom: 160px;
+    }
+  }
+
+
+
+/*---News-Section---*/
 b {
   color: white;
   font-family: Manrope;
@@ -489,10 +490,41 @@ b:hover {
 }
 
 p1 {
-  color:white; 
+  color: white; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/*---Privacy Policy---*/
+.news-entry {
+  background-color: transparent;
+  width: 100%;
+}
+
+.news-entry:hover {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-decoration: solid;
+}
+
+.news-header {
+  animation: none !important;
+}
+
+.news-summary {
+  order: 1;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.news-publication {
+  order: 2;
+  width: 100%;
+}
+
+
+
+/*---Privacy-Policy---*/
 .privacy-container {
   background-color: black;
   color: white;
@@ -523,7 +555,103 @@ p1 {
   font-family: Space Mono;
 }
 
-/*---Missions Page---*/
+
+
+/*---About-Page---*/
+.company-info {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  width: span;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.company-info h1 {
+  color: red;
+  font-family: Calibre;
+  font-size: 300%;
+}
+
+.about-containers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-containers > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about-containers a {
+  all: unset;
+}
+
+.about-containers > div h1 {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  z-index: 1;
+  font-family: Calibre;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  left: 0;
+}
+
+.about-containers > div .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: height 0.2s;
+  z-index: 1;
+  font-family: Calibre;
+  padding: 20px;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.about-containers > div:hover .overlay {
+  height: 100%;
+  visibility: visible;
+}
+
+.about-containers > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+
+/*---Missions-Page---*/
 .planet-containers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -575,4 +703,71 @@ p1 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
+}
+
+
+
+/*---Registration Page---*/
+.registration-container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 40px;
+  color: white;
+  font-family: Calibre;
+}
+
+.registration-container h2 {
+  margin-top: 0;
+  font-size: 32px;
+  color: red;
+  font-family: Calibre;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #666;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+select {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #666;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  font-family: Manrope;
+  text-decoration: none;
+  color: red;
+  background-color: #1a1a1a;
+  padding: 25px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  transition: color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-outs;
+}
+
+input[type="submit"]:hover {
+  color: #1a1a1a;
+  background-color: red;
+  box-shadow: 5px 5px;
 }
