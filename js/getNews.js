@@ -5,7 +5,7 @@ function getNews() {
   var yyyy = today.getFullYear();
   dd = dd-4;
   fetch(
-    "https://api.mediastack.com/v1/news?access_key=9d483ad0841d844e90d53c3d3595ce76&keywords=space&categories=-general,-entertainment,-sports&limit=100&date="+yyyy+"-"+mm+"-"+dd+",2030-12-31&sort=popularity&languages=en"
+    "https://api.mediastack.com/v1/news?access_key=9d483ad0841d844e90d53c3d3595ce76&keywords=space&categories=-general,-entertainment,-sports,-business,-health&limit=100&date="+yyyy+"-"+mm+"-"+dd+",2030-12-31&sort=popularity&languages=en"
   )
     .then((a) => a.json())
     .then((response) => {
@@ -17,7 +17,7 @@ function getNews() {
             
           "<a href='" + response.data[b].url + "' target='_blank' class='news-entry'><b>"+ response.data[b].title +"</b></a>" +
             
-          "<img onerror=this.style.display='none'; style='max-width: 100%; alt='';margin: 0;' src=" + response.data[b].image + "'>"+
+          "<img onerror=this.style.display='none'; style='max-width: 100%; margin: 0;' src=" + response.data[b].image + "'>"+
 
           "<br><p1 class='news-summary'>" + response.data[b].description + "</p1><p1 class='news-publication'><br>" + response.data[b].source + ", published: " + String(response.data[b].published_at).substring(0, 10) + "</p1></div></center>";
           b++;
