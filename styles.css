@@ -504,7 +504,7 @@ p1 {
 }
 
 .news-header {
-  animation: none;
+  animation: none !important;
 }
 
 .news-summary {
