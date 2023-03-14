@@ -5,7 +5,7 @@ function getNews() {
   var yyyy = today.getFullYear();
   dd = dd-4;
   fetch(
-    "https://api.mediastack.com/v1/news?access_key=9d483ad0841d844e90d53c3d3595ce76&keywords=Space&categories=-science,-technology&limit=100&date="+mm+"-"+dd+"-"+yyyy+",2030-12-31&sort=popularity&languages=en"
+    "https://api.mediastack.com/v1/news?access_key=9d483ad0841d844e90d53c3d3595ce76&keywords=Space&categories=-science,-technology&limit=100&date="+yyyy+"-"+mm+"-"+dd+",2030-12-31&sort=popularity&languages=en"
   )
     .then((a) => a.json())
     .then((response) => {
