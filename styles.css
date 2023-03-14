@@ -610,3 +610,62 @@ p1 {
     grid-template-rows: repeat(4, 1fr);
   }
 }
+
+/*---Registration Page---*/
+.registration-container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.registration-container h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: red;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #666;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+select {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #666;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: blue;
+}
+
