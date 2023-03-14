@@ -300,6 +300,7 @@ h1 {
       transform: translateX(0%);
       visibility: visible;
       padding-bottom: 10px;
+      z-index: 100;
     }
   
     .nav-links.active li {
