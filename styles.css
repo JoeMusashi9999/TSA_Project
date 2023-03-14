@@ -523,39 +523,14 @@ p1 {
 
 
 /*---Privacy-Policy---*/
-.privacy-container {
-  background-color: black;
-  color: white;
+.company-info {
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 800px;
-  width: 75%;
-  height: auto;
-  overflow: auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 80%;
 }
 
-.privacy-container h1 {
-  color: red;
-  font-family: Calibre;
-}
-
-.privacy-container h2 {
-  font-family: Calibre;
-}
-
-.privacy-container p {
-  font-family: Space Mono;
-}
-
-
-
-/*---About-Page---*/
 .about-containers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -576,6 +551,7 @@ p1 {
   overflow: hidden;
   border-radius: 10px;
 }
+
 .about-containers a {
   all: unset;
 }
@@ -583,12 +559,36 @@ p1 {
 .about-containers > div h1 {
   position: absolute;
   bottom: 0;
-  left: 0;
   margin: 10px;
   font-size: 1.2rem;
   color: white;
   z-index: 1;
   font-family: Calibre;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  left: 0;
+}
+
+.about-containers > div .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: height 0.2s;
+  z-index: 1;
+  font-family: Calibre;
+  padding: 20px;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.about-containers > div:hover .overlay {
+  height: 100%;
+  visibility: visible;
 }
 
 .about-containers > div img {
@@ -596,10 +596,6 @@ p1 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.2s;
-}
-
-.about-containers > div:hover img {
-  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
