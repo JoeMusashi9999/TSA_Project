@@ -74,7 +74,8 @@
     max-width: 50rem;
   }
   img {
-    max-height:fit-content;
+    max-width:25%;
+    float: right;
     
   }
   footer {
