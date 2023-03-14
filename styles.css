@@ -491,6 +491,11 @@ p1 {
   color:white; 
 }
 
+.news-entry {
+  background-color: transparent;
+  width: 100%;
+}
+
 .news-entry:hover {
   background-color: transparent;
   border: none;
@@ -500,6 +505,16 @@ p1 {
 
 .news-header {
   animation: none;
+}
+
+.news-summary {
+  order: 1;
+  width: 100%;
+}
+
+.news-publication {
+  order: 2;
+  width: 100%;
 }
 
 
