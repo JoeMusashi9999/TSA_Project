@@ -85,6 +85,14 @@ body {
   z-index: 100;
 }
 
+
+.distance, .time, .cost, .gravity,.weather,.living,.population,.training,.vehicles,.saftey,.launch,.recovery {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+}
+
 /* style the link container */
 .link-container {
   left: 0;
