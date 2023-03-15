@@ -814,7 +814,7 @@ input[type="text"],
 input[type="email"],
 textarea {
   background-color: #1a1a1a;
-  color: #white;
+  color: white;
   border: 1px solid #666;
   padding: 8px;
   border-radius: 5px;
@@ -1046,11 +1046,12 @@ p1 {
   margin-right: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   color:black;
+  margin-bottom:0px;
+  font-size:12px;
 }
 
 .chat-input button {
   font-family:Manrope;
-  font-size: 1.2em;
   border: none;
   background-color: white;
   color: black;

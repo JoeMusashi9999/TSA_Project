@@ -1,6 +1,8 @@
 // Set up OpenAI API credentials
 const openaiEndpoint = 'https://api.openai.com/v1/engines/davinci';
-const openaiApiKey = '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';
+require('dotenv').config()
+
+const apiKey = process.env.OPENAI_API_KEY;
 
 // Define function to generate text using OpenAI GPT-3
 // Keep track of previous responses
