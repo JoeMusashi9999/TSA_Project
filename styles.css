@@ -567,16 +567,16 @@ p1 {
 
 
 /*---About-Page---*/
-.company-info { 
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px;
-  padding: 20px;
-  width: span;
-  background-color: rgba(0,0,0,.5);
-  color: white;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+.company-info {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
 }
 
 .company-info h1 {
@@ -584,6 +584,15 @@ p1 {
   color: red;
   font-family: Calibre;
   font-size: 300%;
+}
+
+.company-info-box {
+    width: 48%;
+    margin: 1%;
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    padding: 20px;
 }
 
 .about-containers {
@@ -654,10 +663,16 @@ p1 {
 }
 
 .timeline {
-  position: relative;
-  margin-top: 50px; /* Adjust as needed */
-  padding-bottom: 50px; /* Adjust as needed */
-  left: 50%;
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    width: 50%;
+    left: 75%;
+}
+
+.timeline-h2 {
+    position: relative;
+    transform: translateX(-50%);
 }
 
 .timeline:before {
@@ -718,6 +733,17 @@ p1 {
   .about-containers {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  .timeline {
+    order: 2;
+    width: 100% !important;
+    left: 50%;
+  }
+
+  .company-info-box {
+    order: 1;
+    width: 100% !important;
   }
 }
 
