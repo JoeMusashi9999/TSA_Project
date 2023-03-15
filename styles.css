@@ -711,7 +711,7 @@ p1 {
 
 /*---Registration Page---*/
 .registration-container {
-  background-color: black;
+  background-color: rgb(0, 0, 0,0.5);
   padding: 20px;
   border-radius: 5px;
   margin: 40px;
