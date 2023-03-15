@@ -974,6 +974,7 @@ p1 {
   background-color: #0084ff;
   border-bottom: 1px solid #ccc;
   z-index: 2;
+  opacity: 80%;
 }
 
 .chat-header h3 {
