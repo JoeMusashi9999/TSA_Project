@@ -38,6 +38,7 @@ body {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     margin: 0px;
     padding-bottom: 60px;
+    overflow-x: hidden;
 }
 
 a {
@@ -472,7 +473,7 @@ footer {
 
 
 
-/*---News-Section---*/
+/*---Home-Page---*/
 b {
   color: white;
   font-family: Manrope;
@@ -520,6 +521,14 @@ p1 {
 .news-publication {
   order: 2;
   width: 100%;
+}
+
+.home-art {
+  height: calc(100vh - 270px);
+  margin-top: 20px;
+  margin-left: 50vw;
+  border-radius: 10px;
+  transform: translateX(-50%);
 }
 
 
@@ -644,6 +653,67 @@ p1 {
   transition: transform 0.2s;
 }
 
+.timeline {
+  position: relative;
+  margin-top: 50px; /* Adjust as needed */
+  padding-bottom: 50px; /* Adjust as needed */
+  left: 50%;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px; /* Adjust as needed */
+  width: 2px;
+  height: 100%;
+  background-color: #1f1f1f;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  width: 12px; /* Adjust as needed */
+  height: 12px; /* Adjust as needed */
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+}
+
+.timeline-item .timeline-content {
+  position: relative;
+  margin-left: 30px; /* Adjust as needed */
+  padding: 20px; /* Adjust as needed */
+  background-color: #1f1f1f; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.timeline-item .timeline-date {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: -110px; /* Adjust as needed */
+  width: 100px; /* Adjust as needed */
+  padding: 10px; /* Adjust as needed */
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   .about-containers {
     grid-template-columns: repeat(2, 1fr);
@@ -717,6 +787,9 @@ p1 {
   margin: 40px;
   color: white;
   font-family: Calibre;
+  display: flex;
+  height: 630px;
+  overflow-y: hidden;
 }
 
 .registration-container h2 {
@@ -724,6 +797,11 @@ p1 {
   font-size: 32px;
   color: red;
   font-family: Calibre;
+}
+
+.registration-container form {
+  position: relative;
+  width: 350px;
 }
 
 label {
@@ -774,6 +852,20 @@ input[type="submit"]:hover {
   box-shadow: 5px 5px;
 }
 
+.registration-art {
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .registration-art {
+    visibility: hidden;
+    height: 1px;
+  }
+
+  .registration-container form {
+    width: 100%;
+  }
+}
 
 
 
