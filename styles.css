@@ -523,9 +523,11 @@ p1 {
 }
 
 .home-art {
-  height: 70vh;
-  margin: 40px;
+  height: calc(100vh - 180px);
+  margin-top: 20px;
+  margin-left: 50vw;
   border-radius: 10px;
+  transform: translateX(-50%);
 }
 
 
@@ -723,6 +725,8 @@ p1 {
   margin: 40px;
   color: white;
   font-family: Calibre;
+  justify-content: center;
+  display: flex;
 }
 
 .registration-container h2 {
@@ -730,6 +734,11 @@ p1 {
   font-size: 32px;
   color: red;
   font-family: Calibre;
+}
+
+.registration-container form {
+  position: relative;
+  width: 40%;
 }
 
 label {
@@ -780,6 +789,20 @@ input[type="submit"]:hover {
   box-shadow: 5px 5px;
 }
 
+.registration-art {
+  height: 630px;
+}
+
+@media screen and (max-width: 1100px) {
+  .registration-art {
+    visibility: hidden;
+    height: 1px;
+  }
+
+  .registration-container form {
+    width: 100%;
+  }
+}
 
 
 
