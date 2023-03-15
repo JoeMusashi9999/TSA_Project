@@ -4,49 +4,70 @@
     <title>Mercury</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="planetStyling.css">
+    <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    <header>
-      <h1>Mercury</h1>
-      <nav>
-        <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#composition">Composition</a></li>
-          <li><a href="#orbit">Orbit</a></li>
-          <li><a href="#exploration">Exploration</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="nav">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../static/websiteIcon.png" alt="logo" width="40px" height="40px">
+		    </a>
+        <li><a href="../index.html">TERRA ULTRA</a></li>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../missions.html">Missions</a></li>
+        <li class="signup"><a href="../register.html">Register</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+    </nav>
     <main>
-      <section id="overview">
+      <div class="overview">
         <h2>Overview</h2>
         <p>Mercury is the smallest planet in the solar system and the closest planet to the Sun. It has a diameter of approximately 4,880 kilometers (3,032 miles) and a surface area of about 75 million square kilometers (29 million square miles), which is roughly the same as the continent of South America.</p>
         <img src="../static/planet_description_imgs/Mercury-NASA.jpg" alt="This image could not be displayed">
-      </section>
-      <section id="composition">
+      </div>
+      <div class="composition">
         <h2>Composition</h2>
         <p>Mercury is primarily composed of rock and metal. Its core is thought to be predominantly made up of iron, with smaller amounts of nickel and sulfur. The planet's surface is covered in a layer of dust and debris, and it has a thin atmosphere of helium and sodium.</p>
-      </section>
-      <section id="orbit">
+      </div>
+      <div class="orbit">
         <h2>Orbit</h2>
         <img src="../static\planet_description_imgs\mercury_orbit.jpg">
         <p>Mercury has a highly elliptical orbit that takes it as close as 46 million kilometers (29 million miles) to the Sun and as far as 70 million kilometers (43 million miles) away. It completes one orbit around the Sun every 88 Earth days, and one day on Mercury (the time it takes for the planet to rotate once on its axis) lasts 59 Earth days.</p>
-      </section>
-      <section id="exploration">
+      </div>
+      <div class="exploration">
         <h2>Exploration</h2>
         <p>Mercury has been visited by two spacecraft: Mariner 10 in 1974-75 and MESSENGER in 2008-2015. These missions have provided detailed information about the planet's surface, composition, and magnetic field, and have helped scientists better understand its history and evolution.</p>
-      </section>
+      </div>
     </main>
     <footer>
-        <nav>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="privacy.html">Privacy Policy</a></li>
-              <li><a href="https://github.com/JoeMusashi9999/TSA_Project">GitHub Repository</a></li>
-            </ul>
-        </nav>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+          <div class="footer-middle">
+            <a href="#" id="google_translate_element" class="translate-button" onclick="return false;"></a>
+          </div>
+          <div class="footer-right">
+            <a href="mailto:joemusashi9999@proton.me">Contact</a>
+            <a href="https://github.com/JoeMusashi9999/TSA_Project">Source Code</a>
+          </div>
+        </div>
+      </footer>
     </footer>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar,de,es,fr,it,ja,ko,pt,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+    <script type="text/javascript" src="js/navbar.js"></script>
   </body>
 </html>
