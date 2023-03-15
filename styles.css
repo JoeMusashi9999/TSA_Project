@@ -472,7 +472,7 @@ footer {
 
 
 
-/*---News-Section---*/
+/*---Home-Page---*/
 b {
   color: white;
   font-family: Manrope;
@@ -520,6 +520,12 @@ p1 {
 .news-publication {
   order: 2;
   width: 100%;
+}
+
+.home-art {
+  height: 70vh;
+  margin: 40px;
+  border-radius: 10px;
 }
 
 
