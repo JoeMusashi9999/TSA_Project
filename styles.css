@@ -559,17 +559,19 @@ p1 {
 
 /*---About-Page---*/
 .company-info {
+  
   border-radius: 10px;
   overflow: hidden;
   margin: 20px;
   padding: 20px;
   width: span;
-  background-color: black;
+  background-color: rgba(0,0,0,.5);
   color: white;
   text-align: center;
 }
 
 .company-info h1 {
+  
   color: red;
   font-family: Calibre;
   font-size: 300%;
