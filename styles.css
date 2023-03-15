@@ -144,7 +144,7 @@ h1 {
     border-top: 0.2em solid rgb(255, 255, 255);
     transform: rotate(135deg);
     left: 50%;
-    margin-bottom: 15%;
+    margin-bottom: 3%;
     animation-name: inandout;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
