@@ -7,6 +7,11 @@
 }
 
 @font-face {
+    font-family: Hubhead;
+    src: url(fonts/Hubhead Regular.otf);
+}
+
+@font-face {
     font-family: Calibre;
     src: url(fonts/Calibre-Bold.ttf);
 }
