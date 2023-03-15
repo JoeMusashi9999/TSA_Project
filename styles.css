@@ -814,7 +814,7 @@ input[type="text"],
 input[type="email"],
 textarea {
   background-color: #1a1a1a;
-  color: #white;
+  color: white;
   border: 1px solid #666;
   padding: 8px;
   border-radius: 5px;
