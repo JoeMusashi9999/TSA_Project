@@ -38,6 +38,7 @@ body {
   background-color: black;
   height: fit-content;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 .planet-link-container {

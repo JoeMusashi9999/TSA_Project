@@ -38,6 +38,7 @@ body {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     margin: 0px;
     padding-bottom: 60px;
+    overflow-x: hidden;
 }
 
 a {
@@ -523,7 +524,7 @@ p1 {
 }
 
 .home-art {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 270px);
   margin-top: 20px;
   margin-left: 50vw;
   border-radius: 10px;
@@ -725,7 +726,6 @@ p1 {
   margin: 40px;
   color: white;
   font-family: Calibre;
-  justify-content: center;
   display: flex;
 }
 
