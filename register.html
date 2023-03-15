@@ -49,9 +49,18 @@
             <option value="pluto">Pluto</option>
           </select><br>
 
+          <label for="type">Type of launch:</label>
+          <select id="type" name="type">
+            <option value="none">Please select a type of launch</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Personal">Personal</option>
+            <option value="Governement">Government</option>
+          </select><br>
+
           <label for="other-requests">Other Requests:</label>
           <textarea id="other-requests" name="other-requests"></textarea><br>
-      
+      <div id="output"><p>Please select an option.</p></div>
+      <script src="js/cost-listener.js"></script>
           <input type="submit" value="Start Your Journey">
         </form>
       </div>      
