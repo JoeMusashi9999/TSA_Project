@@ -278,6 +278,7 @@ main {
   display: flex;
   padding-left: 0px;
   margin-right: 10px;
+  
 }
 
 .nav-links li {
@@ -296,6 +297,7 @@ main {
   background-color: transparent;
   transition: none;
   padding-bottom: 10px;
+  font-family: Manrope;
 }
 
 .nav-links a::before {
