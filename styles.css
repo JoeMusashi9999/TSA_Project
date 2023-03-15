@@ -567,8 +567,7 @@ p1 {
 
 
 /*---About-Page---*/
-.company-info {
-  
+.company-info { 
   border-radius: 10px;
   overflow: hidden;
   margin: 20px;
@@ -577,6 +576,7 @@ p1 {
   background-color: rgba(0,0,0,.5);
   color: white;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .company-info h1 {
@@ -801,7 +801,7 @@ p1 {
 
 .registration-container form {
   position: relative;
-  width: 350px;
+  width: 450px;
 }
 
 label {
@@ -860,6 +860,7 @@ input[type="submit"]:hover {
   .registration-art {
     visibility: hidden;
     height: 1px;
+    width: 1px;
   }
 
   .registration-container form {
@@ -867,61 +868,6 @@ input[type="submit"]:hover {
   }
 }
 
-
-
-/*planets*/
-.planets {
-  background-color: rgb(0, 0, 0,0.5);
-  border-radius: 10px;
-  text-align: center;
-  color: whitesmoke;
-  font-family: Calibre;
-  margin-right: 1%;
-  margin-left: 1%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-
-}
-.overview p, 
-.orbit p,
-.missions p{ 
-  font-size: 2rem;
-  max-width: 50%;
-  margin-right: 50%;
-  margin-left: 1%;
-  margin-bottom: 1%;
-
-}
-.overview h2,.orbit h2,.missions h2{
-  font-size: 4rem;
-  max-width: 50%;
-  margin-right: 1%;
-  margin-left: 1%;
-  
-}
-
-.composition p, 
-.exploration p {
-  font-size: 2rem;
-  max-width: 50%;
-  margin-right: 1%;
-  margin-left: 50%;
-}
-
-.composition h2, 
-.exploration h2 {
-  font-size: 4rem;
-  max-width: 50%;
-  margin-right: 1%;
-  margin-left: 50%;
-}
-
-.overview img {
-  border-radius: 10px;
-  max-width: 45%;
-  float:right;
-  margin-right: 1%;
-}
 
 
 /* chat widget elements */
