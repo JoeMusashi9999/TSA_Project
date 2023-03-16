@@ -19,9 +19,9 @@ function getNews() {
         
           "<h2>response.data[b].title</h2>"
         
-          "<img onerror=this.style.display='none'; style='max-width: 100%; margin: 0;' src=" + response.data[b].image + "'>"
+          "<img onerror=this.style.display='none'; style='max-width: 100%; margin: 0;' src='" + response.data[b].image + "'>"
         
-          "<p1 class = "'news-summary'>"+response.data[b].description+"</p1>"
+          "<p1 class = 'news-summary'>"+response.data[b].description+"</p1>"
         
           "<p1 class='news-publication'><br>" + response.data[b].source + ", published: " + String(response.data[b].published_at).substring(0, 10) + "</p1>"
         
