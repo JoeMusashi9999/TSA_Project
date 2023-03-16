@@ -573,31 +573,30 @@ p1 {
 
 /*---About-Page---*/
 .company-info {
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(0,0,0,.5);
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap; /* added */
+  justify-content: center; /* added */
 }
 
 .company-info h1 {
-  
   color: red;
   font-family: Calibre;
   font-size: 300%;
 }
 
 .company-info-box {
-    width: 48%;
-    margin: 1%;
-    display: inline-block;
-    position: absolute;
-    left: 20px;
-    padding: 20px;
+  flex-basis: 48%; /* changed */
+  margin: 1%;
+  padding: 20px;
+  text-align: left;
 }
 
 .about-containers {
@@ -668,16 +667,14 @@ p1 {
 }
 
 .timeline {
-    position: relative;
-    margin-top: 50px;
-    padding-bottom: 50px;
-    width: 50%;
-    left: 75%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  flex-basis: 100%; /* changed */
+  margin-left: 100px;
 }
 
 .timeline-h2 {
-    position: relative;
-    transform: translateX(-50%);
+  text-align: center; /* added */
 }
 
 .timeline:before {
@@ -717,7 +714,6 @@ p1 {
   background-color: #1f1f1f; /* Adjust as needed */
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 30%;
 }
 
 .timeline-item .timeline-date {
@@ -734,21 +730,42 @@ p1 {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1100px) {
+  .company-info-box {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    flex-basis: 90%;
+  }
+  
+  .company-info {
+    flex-wrap: wrap;
+  }
+  
+  .timeline {
+    margin-top: 1rem;
+    position: relative
+  }
+  
   .about-containers {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 
-  .timeline {
-    order: 2;
-    width: 100% !important;
-    left: 50%;
+  .timeline:before {
+    left: 17px;
   }
+}
 
+@media screen and (min-width: 1101px) {
   .company-info-box {
-    order: 1;
-    width: 100% !important;
+    max-width: 50%;
+    margin-right: 1rem;
+  }
+  
+  .timeline {
+    flex: 1;
+    margin-top: 0;
+    position: relative;
   }
 }
 
