@@ -905,7 +905,9 @@ input[type="submit"]:hover {
 }
 
 .registration-art {
-  width: 100%;
+  vertical-align:middle;
+  max-height: fit-content;
+  margin:10px;
 }
 
 @media screen and (max-width: 1100px) {
