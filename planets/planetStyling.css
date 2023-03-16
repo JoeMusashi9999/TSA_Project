@@ -316,7 +316,7 @@ main {
   position: fixed;
   z-index: 100;
   top: 0px;
-  width: 100vw;
+  width: calc(100% - 30px);
   background-color: black;
 }
 
