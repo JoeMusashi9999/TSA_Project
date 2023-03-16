@@ -666,6 +666,10 @@ p1 {
   transition: transform 0.2s;
 }
 
+.our-history-p {
+  margin-bottom: 50px;
+}
+
 .timeline {
   margin-top: 50px;
   padding-bottom: 50px;
