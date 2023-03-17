@@ -588,7 +588,7 @@ footer {
 body iframe[title="Language Translate Widget"] {
   bottom: 60px;
   top: auto !important;
-  position: absolute !important;
+  position: fixed !important;
 }
 
 .translate-button {
