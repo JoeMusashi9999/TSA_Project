@@ -221,10 +221,6 @@ main {
   background-color: rgb(204, 0, 187) !important;
 }
 
-.recovery {
-  /* idk */
-}
-
 .planet-info-containers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
