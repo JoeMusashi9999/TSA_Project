@@ -7,4 +7,4 @@ main link: https://joemusashi9999.github.io/TSA_Project/
 
 plan of work log: https://joemusashi9999.github.io/TSA_Project/completedPlanOfWorkLog.pdf
 
-copyrighted material: https://joemusashi9999.github.io/TSA_Project/Terra Ultra Copyrighted Material.pdf
+copyrighted material: https://joemusashi9999.github.io/TSA_Project/terraUltraCopyrightedMaterial.pdf
