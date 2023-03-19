@@ -530,7 +530,7 @@ p1 {
 
 .home-art {
   height: calc(100vh - 270px);
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 50vw;
   border-radius: 10px;
   transform: translateX(-50%);
@@ -1086,4 +1086,10 @@ p1 {
   border-radius: 50%;
   cursor: nwse-resize;
   z-index: 1;
+}
+
+
+canvas {
+  border: 1px solid white;
+  margin-bottom:20px;
 }
