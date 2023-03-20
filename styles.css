@@ -514,6 +514,7 @@ p1 {
 
 .news-header {
   animation: none !important;
+  margin-top:60px;
 }
 
 .news-summary {
