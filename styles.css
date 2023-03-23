@@ -534,6 +534,12 @@ p1 {
   width: 100%;
 }
 
+#output img {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
 .home-art {
   height: calc(100vh - 270px);
   margin-top: 40px;
