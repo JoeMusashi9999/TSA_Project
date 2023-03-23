@@ -16,6 +16,11 @@
     src: url(fonts/Calibre-Bold.ttf);
 }
 
+@font-face {
+    font-family: Ransom;
+    src: url(fonts/Ransom.ttf);
+}
+
 @keyframes inandout {
     0% {opacity: 0;}
     25% {opacity: 0.5;}
@@ -71,7 +76,7 @@ h1 {
 
 /*---Launch-Page---*/
 #welcomeHeader {
-    font-family: Space Mono;
+    font-family: Ransom;
     font-size: 80px;
     color: white;
     text-align: center;
