@@ -1094,6 +1094,10 @@ p1 {
   z-index: 1;
 }
 
+#container canvas {
+  margin: 0;
+  border-color: transparent;
+}
 
 canvas {
   border: 1px solid white;
